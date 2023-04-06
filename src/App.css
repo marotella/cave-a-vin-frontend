@@ -1,9 +1,9 @@
 .Nav {
-  background-image: url("../public/navimage.jpeg");
-  background-size:cover;
-  background-position:center;
-  background-repeat: no-repeat;
-  margin:auto;
+  background-image: url("../public/greengrapes2.jpeg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat:no-repeat;
+  /* margin: auto; */
   height: 180px;
 }
 
@@ -11,4 +11,43 @@
   background-color:white;
   border: 2px solid white;
   border-radius: 10%;
+}
+.navheader {
+  background-color:#729368;
+}
+footer {
+background-color:#729368;
+position:absolute;
+bottom:0px;
+text-align: center;
+width:100%;
+height:50px;
+}
+.logo {
+  background-image: url("../public/logo.png");
+  background-size: 100%;
+  background-position: center;
+  background-repeat:no-repeat;
+  height:200px;
+  width:200px;
+  z-index: 1;
+  position: absolute;
+  top:220px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.emailimg {
+  height:50px;
+  width:50px;
+}
+.fbimg {
+  height:33px;
+  width:33px;
+  margin-right:12px;
+  margin-bottom:5px;
+}
+.igimg {
+  height:33px;
+  width:33px;
+  margin-bottom:5px;
 }
