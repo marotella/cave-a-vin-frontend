@@ -18,7 +18,7 @@ function Header() {
           <a class="nav-link" style={{color:"white"}} href="#">About Us</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" style={{color:"white"}} >Wine Selections</a>
+          <a class="nav-link" style={{color:"white"}} href="#">Wine Selections</a>
         </li>
       </ul>
       <form class="d-flex" role="search">
