@@ -1,14 +1,18 @@
 .Nav {
-  background-image: url("../public/navimage.jpeg");
-  background-size:cover;
-  background-position:center;
-  background-repeat: no-repeat;
-  margin:auto;
-  height: 180px;
+  background-image: url("../public/greengrapes2.jpeg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat:no-repeat;
+  /* margin: auto; */
+  height: 200px;
 }
 
 .btn1 {
   background-color:white;
   border: 2px solid white;
   border-radius: 10%;
+}
+
+.navheader {
+  background-color:#729368;
 }
