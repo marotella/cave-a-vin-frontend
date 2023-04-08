@@ -37,6 +37,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/wines" element={<Wines wineData={wineData}/>}/>
+        <Route exact path="/" element={<Home URL={URL}/>}/>
+        <Route exact path="/about" element={<About URL={URL}/>}/>
+        <Route exact path="/register" element={<Register URL={URL}/>}/>
+        {/* <Route exact path="/wines" element={<Wines URL={URL}/>}/> */}
 
       </Routes>
       <Footer />
