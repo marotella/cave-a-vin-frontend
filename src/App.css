@@ -176,13 +176,17 @@ h2:last-of-type h2 {
   position:absolute;
   left:3%;
   top:15%;
-
+  margin-top:5%;
 }
 .aboutp {
   height: 650px;
   width: 650px;
   position:relative;
   left:50%;
-
 }
 
+.abouth3 {
+  position:relative;
+  margin-top:4%;
+  left:3%;
+}
