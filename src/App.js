@@ -12,7 +12,7 @@ import { Route, Routes } from "react-router-dom"
 
 
 function App() {
-  //const URL = "http://localhost:4000/"
+  const URL = "http://localhost:4000/"
   const [wineData, setWineData] = React.useState(null)
   const getWineData = async () => {
     const response = await fetch (
@@ -20,11 +20,12 @@ function App() {
     )
     const data =await response.json()
     setWineData(data)
-    console.log(wineData)
+    console.log(data)
   }
   React.useEffect(()=> {
     getWineData();},
     [])
+  
   return (
     <div>
       <div className='Nav'>
@@ -34,6 +35,7 @@ function App() {
       <Logo />
       <Routes>
         <Route path="/" element={<Home />} />
+
       </Routes>
       <Footer />
     </div>
