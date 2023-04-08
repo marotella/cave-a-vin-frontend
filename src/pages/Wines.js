@@ -1,23 +1,23 @@
-// import { useState } from "react";
-// import {Link} from "react-router-dom"
+import { useState } from "react";
+import {Link} from "react-router-dom"
 
-// const Wines = (props) => {
+const Wines = (props) => {
 
-//   // loaded function
-//   const loaded = () => {
-//     return props.wines.map((wine) => (
-//       <div key={wine._id} className="wine">
-//         <Link to={`/wine/${wine._id}`}><h1>{wine.name}</h1></Link>
-//         <img src={wine.image} alt={wine.name} />
-//         <h3>{wine.title}</h3>
-//       </div>
-//     ));
-//   };
+  // loaded function
+  const loaded = () => {
+    return props.wineData.map((wineData) => (
+      <div key={wineData._id} className="wine">
+        <h1>{wineData.wine}</h1>
+        <img src={wineData.image} alt={wineData.wine} />
+        <h3>{wineData.winery}</h3>
+      </div>
+    ));
+  };
 
-//   const loading = () => {
-//     return <h1>Loading...</h1>;
-//   };
-//   return (props.wines ? loaded() : loading());
-// }
+  const loading = () => {
+    return <h1>Loading...</h1>;
+  };
+  return (props.wineData ? loaded() : loading());
+}
 
-// export default Wines
+export default Wines
