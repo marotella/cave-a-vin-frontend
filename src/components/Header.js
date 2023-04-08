@@ -12,10 +12,10 @@ function Header() {
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" style={{color:"white"}} aria-current="page" href="#">Home</a>
+          <a class="nav-link" style={{color:"white"}} aria-current="page" href="/home">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" style={{color:"white"}} href="#">About Us</a>
+          <a class="nav-link" style={{color:"white"}} href="/about">About Us</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" style={{color:"white"}} href="#">Wine Selections</a>

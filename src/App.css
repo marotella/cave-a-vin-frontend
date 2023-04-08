@@ -104,16 +104,17 @@ height:50px;
   top:-10px;
   position:relative;
   left:100%;
-}
-p {
   color:rgb(140,39,35);
   font-size:17px;
-  position:relative;
-  left:40%;
 }
+
 .quote {
+  color:rgb(140,39,35);
+  font-size:17px;
   font-style: italic;
   margin-top:30px;
+  position:relative;
+  left:40%;
 }
 
 
@@ -164,3 +165,24 @@ h2:last-of-type h2 {
     80% {opacity:1;}
     100% {opacity:0;width:455px;}
 }
+
+.aboutus {
+  background-image: url("../public/handgrapes.jpeg");
+  background-size:70%;
+  background-position: left center;
+  background-repeat:no-repeat;
+  height:700px;
+  width:800px;
+  position:absolute;
+  left:3%;
+  top:15%;
+
+}
+.aboutp {
+  height: 650px;
+  width: 650px;
+  position:relative;
+  left:50%;
+
+}
+

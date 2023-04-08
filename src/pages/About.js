@@ -2,7 +2,8 @@ function About() {
     return (
         <div className="about">
             <h3>About Us</h3>
-            <p>
+            <span className="aboutus">kfnvkldfnv;;s</span>
+            <p className="aboutp">
             Welcome to our wine cellar app! We are a team of wine enthusiasts who are passionate about discovering new and interesting wines from all around the world. Our app is designed to help you explore a wide variety of wines from different regions and grape varietals.
 
             At our core, we believe that wine is more than just a beverage, "it's an experience". That's why we've carefully curated a selection of wines that represent the best of what the world has to offer. Whether you're a seasoned wine connoisseur or just starting out on your wine journey, we're confident that you'll find something that you love in our collection.
