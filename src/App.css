@@ -190,3 +190,23 @@ h2:last-of-type h2 {
   margin-top:4%;
   left:3%;
 }
+
+.signin {
+  height:400px;
+  width:500px;
+  position:absolute;
+  display: inline;
+  float:right;
+  left:60%;
+  padding-top:5%;
+}
+
+.signup {
+  height:400px;
+  width:500px;
+  position:absolute;
+  display: inline;
+  float:right;
+  left:5%;
+  padding-top:5%;
+}

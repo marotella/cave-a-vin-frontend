@@ -3,12 +3,12 @@ function Register() {
         <div className="user">
         <div className="signup">
             <form>
-            <h3 className="register">Sign up</h3>
+            <h3 className="register">Register</h3>
             <input type="text" class="form-control" placeholder="First name" aria-label="First name"></input><br></br>
             <input type="text" class="form-control" placeholder="Last name" aria-label="Last name"></input><br></br>
             <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email" aria-describedby="emailHelp"></input><br></br>
             <div class="col-auto">
-            <button type="submit" class="btn btn-primary mb-3" onclick="subscribed()">Subscribe</button>
+            <button type="submit" class="btn btn-primary mb-3" onclick="subscribed()">Register</button>
             </div>
             </form>
         </div>
@@ -19,7 +19,7 @@ function Register() {
             <input type="text" class="form-control" placeholder="Last name" aria-label="Last name"></input><br></br>
             <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email" aria-describedby="emailHelp"></input><br></br>
             <div class="col-auto">
-            <button type="submit" class="btn btn-primary mb-3" onclick="subscribed()">Subscribe</button>
+            <button type="submit" class="btn btn-primary mb-3" onclick="subscribed()">Log in</button>
             </div>
             </form>
         </div>
