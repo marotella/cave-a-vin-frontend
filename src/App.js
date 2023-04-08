@@ -21,11 +21,12 @@ function App() {
     )
     const data =await response.json()
     setWineData(data)
-    console.log(wineData)
+    console.log(data)
   }
   React.useEffect(()=> {
     getWineData();},
     [])
+  
   return (
     <div>
       <div className='Nav'>

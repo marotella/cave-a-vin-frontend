@@ -2,7 +2,7 @@ function About() {
     return (
         <div className="about">
             <h3>About Us</h3>
-            <span className="aboutus">kfnvkldfnv;;s</span>
+            <span className="aboutus"></span>
             <p className="aboutp">
             Welcome to our wine cellar app! We are a team of wine enthusiasts who are passionate about discovering new and interesting wines from all around the world. Our app is designed to help you explore a wide variety of wines from different regions and grape varietals.
 
