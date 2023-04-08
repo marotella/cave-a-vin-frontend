@@ -7,6 +7,7 @@ import Header from "./components/Header"
 import Footer from "./components/Footer"
 import Logo from "./components/Logo"
 import Home from "./pages/Home"
+import Wines from "./pages/Wines"
 import { useEffect, useState } from 'react';
 import { Route, Routes } from "react-router-dom"
 
@@ -35,6 +36,7 @@ function App() {
       <Logo />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/wines" element={<Wines wineData={wineData}/>}/>
 
       </Routes>
       <Footer />
