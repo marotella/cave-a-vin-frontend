@@ -51,3 +51,117 @@ height:50px;
   width:33px;
   margin-bottom:5px;
 }
+/* html {
+  background-color: #d0eac8a5;
+} */
+.container1 {
+  height:400px;
+  padding-top:50px;
+  background-image: url("../public/winepour2.png");
+  background-size: 40% 110%;
+  background-position: left center;
+  background-repeat:no-repeat;
+
+  /* box-shadow: rgb(224,196,195) 0 -25px 18px -14px inset,rgba(224,196,195) 0 1px 2px,rgba(188,124,124) 0 2px 4px,rgba(188,124,124) 0 4px 8px,rgba(188,124,124) 0 8px 16px,rgba(224,196,195) 0 16px 32px; */
+  background-color:#f9e8e8;
+  position:relative;
+
+}
+
+.container2 {
+  height:400px;
+  background-color:#f9e8e8;
+  position:absolute;
+  left:67%;
+  top:-8%;
+  z-index: -1;
+  
+}
+
+.explore {
+  background-color: #861c1c;
+  border-radius: 100px;
+  box-shadow: rgb(140,39,35) 0 -25px 18px -14px inset,rgba(188,124,124) 0 1px 2px,rgba(188,124,124) 0 2px 4px,rgba(188,124,124) 0 4px 8px;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  padding: 7px 20px;
+  text-align: center;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+  margin-top:5px;
+  position:relative;
+  left:40%;
+}
+
+.explore:hover {
+  box-shadow: rgb(140,39,35) 0 -25px 18px -14px inset,rgba(188,124,124) 0 1px 2px,rgba(188,124,124) 0 2px 4px,rgba(188,124,124) 0 4px 8px,rgba(188,124,124) 0 8px 16px,rgba(224,196,195) 0 16px 32px;
+  transform: scale(1.05) rotate(0deg);
+}
+
+.author {
+  position:relative;
+  top:-10px;
+  position:relative;
+  left:100%;
+}
+p {
+  color:rgb(140,39,35);
+  font-size:17px;
+  position:relative;
+  left:40%;
+}
+.quote {
+  font-style: italic;
+  margin-top:30px;
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+
+h2 {
+  color:#943330;
+  position:relative;
+  left:40%;
+  padding-top:8%;
+  overflow:hidden;
+}
+
+div h2{
+  display:inline-block;
+  overflow:hidden;
+  white-space:nowrap;
+}
+
+h2:last-of-type {
+  width:0px;
+  animation: reveal 7s infinite;
+}
+
+h2:last-of-type h2 {
+  margin-left:-355px;
+  animation: slidein 7s infinite;
+}
+
+@keyframes showup {
+    0% {opacity:0;}
+    20% {opacity:1;}
+    80% {opacity:1;}
+    100% {opacity:0;}
+}
+
+@keyframes slidein {
+    0% { margin-left:-800px; }
+    20% { margin-left:-800px; }
+    35% { margin-left:0px; }
+    100% { margin-left:0px; }
+}
+
+@keyframes reveal {
+    0% {opacity:0;width:0px;}
+    20% {opacity:1;width:0px;}
+    30% {width:355px;}
+    80% {opacity:1;}
+    100% {opacity:0;width:455px;}
+}

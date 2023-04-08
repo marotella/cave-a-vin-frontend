@@ -1,6 +1,6 @@
 function Footer(props) {
     return (
-      <footer>
+      <footer className="footer">
         <div className="socialmedia">
         <a href="mailto:caveavin@example.com">
           <img className='emailimg' src="https://i.imgur.com/repqUlu.png" alt="Facebook" />
