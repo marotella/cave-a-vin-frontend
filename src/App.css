@@ -190,3 +190,33 @@ h2:last-of-type h2 {
   margin-top:4%;
   left:3%;
 }
+
+.wineIndex{
+  display: flex;
+  margin: 10px;
+  padding: 10px;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.wineTiles {
+  width: calc(25% - 5px);
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  border: 2px outset white;
+  background-color: rgba(140,39,35);
+  color: white;
+  padding: 5px;
+  margin: 5px;
+  width: 250px;
+  border-radius: 10px;
+}
+
+.wineTileImg {
+  max-width: 100px;
+  max-height: 150px;
+}
