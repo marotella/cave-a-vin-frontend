@@ -18,10 +18,10 @@ function Header() {
           <a class="nav-link" style={{color:"white"}} href="/about">About Us</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" style={{color:"white"}} href="#">Wine Selections</a>
+          <a class="nav-link" style={{color:"white"}} href="/wines">Wine Selections</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" style={{color:"white"}} href="#">Register/Login</a>
+          <a class="nav-link" style={{color:"white"}} href="/register">Register/Login</a>
         </li>
       </ul>
       <form class="d-flex" role="search">
