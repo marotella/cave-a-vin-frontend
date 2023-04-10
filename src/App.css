@@ -15,14 +15,8 @@
 .navheader {
   background-color:#729368;
 }
-footer {
-background-color:#729368;
-position:absolute;
-bottom:0px;
-text-align: center;
-width:100%;
-height:50px;
-}
+
+
 .logo {
   background-image: url("../public/logo.png");
   background-size: 100%;
@@ -64,8 +58,9 @@ height:50px;
   /* box-shadow: rgb(224,196,195) 0 -25px 18px -14px inset,rgba(224,196,195) 0 1px 2px,rgba(188,124,124) 0 2px 4px,rgba(188,124,124) 0 4px 8px,rgba(188,124,124) 0 8px 16px,rgba(224,196,195) 0 16px 32px; */
   background-color:#f9e8e8;
   position:relative;
-
+  
 }
+
 
 .container2 {
   height:432px;
@@ -242,16 +237,15 @@ h2:last-of-type h2 {
 }
 
 .signin {
-  background-image: url("../public/winepour.jpeg");
-  background-size:80%;
+  /* background-image: url("../public/winepour.jpeg");
+  background-size:50%;
   background-position: right center;
-  background-repeat:no-repeat;
+  background-repeat:no-repeat; */
   height:700px;
   width:900px;
   position:absolute;
-  display: inline;
   float:right;
-  left:60%;
+  right: -10%;
   padding-top:5%;
 }
 
@@ -263,10 +257,17 @@ h2:last-of-type h2 {
   height:500px;
   width:600px;
   position:absolute;
-  display: inline;
   float:right;
-  left:10%;
+  left:15%;
   padding-top:5%;
 }
 
-
+footer {
+  background-color:#729368;
+  position:fixed;
+  bottom:0px;
+  text-align: center;
+  width:100%;
+  }
+  
+ 

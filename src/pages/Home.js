@@ -9,7 +9,10 @@ function Home() {
         </div>
             <p className="quote">"Drinking good wine with good food in good company is one of life’s most civilized pleasures."</p>
             <p className="author">-Michael Broadbent</p>
+            <a href="/wines">
             <button className="explore"> Explore Our Wine Cellar</button>
+            </a>
+    
         <div className="container2" style={{ width: "100%" }}></div>
         </div>
      

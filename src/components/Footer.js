@@ -15,9 +15,9 @@ function Footer(props) {
           >
             <img className='igimg' src="https://i.imgur.com/i96mrRb.png" alt="Instagram" />
           </a>
+          <p>&copy; {new Date().getFullYear()} Cave a Vin. All rights reserved.</p>
         </div>
   
-        <p>&copy; {new Date().getFullYear()} Cave a Vin. All rights reserved.</p>
       </footer>
     );
   }
