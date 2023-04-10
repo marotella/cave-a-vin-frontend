@@ -14,15 +14,9 @@
 }
 .navheader {
   background-color:#729368;
+  z-index: 1;
 }
-footer {
-background-color:#729368;
-position:absolute;
-bottom:0px;
-text-align: center;
-width:100%;
-height:50px;
-}
+
 .logo {
   background-image: url("../public/logo.png");
   background-size: 100%;
@@ -32,7 +26,7 @@ height:50px;
   width:200px;
   z-index: 1;
   position: absolute;
-  top:220px;
+  top:175px;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -64,7 +58,6 @@ height:50px;
   /* box-shadow: rgb(224,196,195) 0 -25px 18px -14px inset,rgba(224,196,195) 0 1px 2px,rgba(188,124,124) 0 2px 4px,rgba(188,124,124) 0 4px 8px,rgba(188,124,124) 0 8px 16px,rgba(224,196,195) 0 16px 32px; */
   background-color:#f9e8e8;
   position:relative;
-
 }
 
 .container2 {
@@ -74,7 +67,42 @@ height:50px;
   left:67%;
   top:-8%;
   z-index: -1;
-  
+}
+.container3 {
+
+  background-color:pink;
+  height: 100%;
+  position:absolute;
+  top:100%;
+}
+.container4 {
+
+  height:100%;
+  background-color: yellow;
+  position:absolute;
+  left:67%;
+  top:100%;
+  width:100%;
+
+}
+.container5 {
+  background-color: #861c1c;
+  position:relative;
+  top:135%;
+  height:350px;
+
+}
+.container6 {
+  background-image: url("../public/background.jpeg");
+  background-size:cover;
+  background-position:left center;
+  background-repeat:no-repeat;
+  background-color: #861c1c;
+  position:relative;
+  width:67%;
+  left:100%;
+  height:350px;
+  bottom:66%;
 }
 
 .explore {
@@ -160,8 +188,19 @@ h2:last-of-type {
 }
 
 h2:last-of-type h2 {
-  margin-left:-355px;
+  position: relative;
+  left:-355px;
   animation: slidein 7s infinite;
+}
+.cheers {
+  font-size: 25px;
+  animation: slidecheers 10s infinite;
+  color:rgb(140,39,35);
+}
+@keyframes slidecheers {
+  0% { margin-left:-1100px; }
+  /* 35% { margin-left:0px; } */
+  100% { margin-left:300px; }
 }
 
 @keyframes showup {
@@ -194,7 +233,7 @@ h2:last-of-type h2 {
   height:700px;
   width:800px;
   position:absolute;
-  left:3%;
+  left:4%;
   top:15%;
   margin-top:5%;
 }
@@ -203,6 +242,8 @@ h2:last-of-type h2 {
   width: 650px;
   position:relative;
   left:50%;
+  top:15%;
+  margin-top:2%;
 }
 
 .abouth3 {
@@ -217,6 +258,7 @@ h2:last-of-type h2 {
   padding: 10px;
   flex-flow: row wrap;
   justify-content: center;
+
 }
 
 .wineTiles {
@@ -234,6 +276,7 @@ h2:last-of-type h2 {
   margin: 5px;
   width: 250px;
   border-radius: 10px;
+
 }
 
 .wineTileImg {
@@ -242,16 +285,15 @@ h2:last-of-type h2 {
 }
 
 .signin {
-  background-image: url("../public/winepour.jpeg");
-  background-size:80%;
+  /* background-image: url("../public/winepour.jpeg");
+  background-size:50%;
   background-position: right center;
-  background-repeat:no-repeat;
+  background-repeat:no-repeat; */
   height:700px;
   width:900px;
   position:absolute;
-  display: inline;
   float:right;
-  left:60%;
+  right: -10%;
   padding-top:5%;
 }
 
@@ -263,10 +305,27 @@ h2:last-of-type h2 {
   height:500px;
   width:600px;
   position:absolute;
-  display: inline;
   float:right;
-  left:10%;
+  left:15%;
   padding-top:5%;
 }
 
-
+footer {
+  background-color:#729368;
+  position:fixed;
+  bottom:0px;
+  text-align: center;
+  width:100%;
+  }
+  
+ .contact {
+  position:absolute;
+  bottom:70%;
+  left:50%;
+ }
+ .cave {
+  padding:15px;
+ }
+ li {
+  list-style: none;
+ }
