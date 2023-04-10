@@ -237,15 +237,15 @@ h2:last-of-type h2 {
 }
 
 .signin {
-  background-image: url("../public/winepour.jpeg");
-  background-size:70%;
+  /* background-image: url("../public/winepour.jpeg");
+  background-size:50%;
   background-position: right center;
-  background-repeat:no-repeat;
+  background-repeat:no-repeat; */
   height:700px;
   width:900px;
   position:absolute;
   float:right;
-  left:60%;
+  right: -10%;
   padding-top:5%;
 }
 
@@ -258,7 +258,7 @@ h2:last-of-type h2 {
   width:600px;
   position:absolute;
   float:right;
-  left:10%;
+  left:15%;
   padding-top:5%;
 }
 
@@ -269,3 +269,5 @@ footer {
   text-align: center;
   width:100%;
   }
+  
+ 
