@@ -14,10 +14,31 @@ function Home() {
             </a>
     
         <div className="container2" style={{ width: "100%" }}></div>
-        <div className="container3" style={{ width: "100%" }}><p>hello container3</p></div>
-        <div className="container4"><p>hello container4</p></div>
+        {/* <div className="container3" style={{ width: "50%" }}><p>hello container3</p></div> */}
+        <div className="container4"><h3 className="process">The Wine Making Process</h3>
+            <div className="box1">
+                <p>
+                <h4>Harvesting and Crushing</h4> Grapes are harvested from the vineyard and transported to the winery where they are crushed to extract the juice. This process can be done either by hand or by using specialized machinery.
+                </p>
+            </div>
+            <div className="box2">
+                <p>
+                <h4>Fermentation</h4> The extracted grape juice is then transferred to a fermentation tank where yeast is added to the juice. Yeast converts the natural sugar in the grape juice into alcohol and carbon dioxide. This process can take anywhere from several days to several weeks depending on the desired alcohol content and flavor profile.
+                </p>
+            </div>
+            <div className="box3">
+                <p>
+                <h4>Aging and Bottling</h4> After fermentation is complete, the wine is transferred to oak barrels or stainless steel tanks for aging. The aging process allows the wine to develop its characteristic flavor and aroma. Once the aging process is complete, the wine is bottled and ready to be enjoyed.
+                </p>
+            </div>
+            
+            <div className="p1"></div>
+            <div className="p2"></div>
+            <div className="p3"></div>
+            <div className="cheese"></div>
+        </div>
 
-        <div className="container5">
+        <div className="container5"style={{ width: "100%" }}>
       
             <h3 className="cave">Cave A Vin</h3>
             <ul>

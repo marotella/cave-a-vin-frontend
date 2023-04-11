@@ -68,28 +68,32 @@
   top:-8%;
   z-index: -1;
 }
-.container3 {
+/* .container3 {
 
   background-color:pink;
   height: 100%;
   position:absolute;
   top:100%;
-}
+} */
 .container4 {
-
+  /* background-image: url("../public/back.jpeg"); */
+ 
+  background-size:cover;
+  background-position:left center;
+  background-repeat:no-repeat;
   height:100%;
-  background-color: yellow;
+  background-color: white;
   position:absolute;
-  left:67%;
+  /* left:47%; */
   top:100%;
-  width:100%;
-
+  width:170%;
+  overflow-x: auto;
 }
 .container5 {
   background-color: #861c1c;
   position:relative;
   top:135%;
-  height:350px;
+  height:352px;
 
 }
 .container6 {
@@ -99,8 +103,8 @@
   background-repeat:no-repeat;
   background-color: #861c1c;
   position:relative;
-  width:67%;
-  left:100%;
+  width:97%;
+  left:73%;
   height:350px;
   bottom:66%;
 }
@@ -325,7 +329,95 @@ footer {
  }
  .cave {
   padding:15px;
+  padding-left:30px;
  }
  li {
   list-style: none;
+ }
+
+ .box1 {
+  height:300px;
+  width:450px;
+  position:relative;
+  margin:50px;
+  text-align:center;
+  padding-top:60px;
+  display:flex;
+ }
+ .box2 {
+  height:300px;
+  width:450px;
+  position:relative;
+  margin:50px;
+  text-align:center;
+  padding-top:60px;
+  display:flex;
+ }
+ .box3 {
+  height:300px;
+  width:450px;
+  position:relative;
+  margin:50px;
+  text-align:center;
+  padding-top:60px;
+  display:flex;
+  /* margin-bottom:-50%; */
+ }
+ .p1 {
+  background-image: url("../public/purplegrape.jpeg");
+  background-size:100%;
+  background-position: center;
+  background-repeat:no-repeat;
+  height:300px;
+  width:650px;
+  position:relative;
+  bottom:262%;
+  margin:70px;
+  left:40%;
+
+ }
+ .p2 {
+  background-image: url("../public/barrel2.jpeg");
+  background-size:100%;
+  background-position: center;
+  background-repeat:no-repeat;
+  height:300px;
+  width:650px;
+  position:relative;
+  bottom:262%;
+  margin:70px;
+  left:40%;
+ }
+ .p3 {
+  background-image: url("../public/cheers.jpeg");
+  background-size:100%;
+  background-position: center;
+  background-repeat:no-repeat;
+  height:300px;
+  width:650px;
+  position:relative;
+  bottom:262%;
+  margin:70px;
+  left:40%;
+
+ }
+
+ .cheese {
+  background-image: url("../public/cheeseplate2.jpeg");
+  background-size:100%;
+  background-position: center;
+  background-repeat:no-repeat;
+ 
+  position:relative;
+  height:700px;
+  width:100%;
+
+  margin-top:-60%;
+ }
+ .process {
+  text-align:center;
+  padding-top:5%;
+  color: #861c1c;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 40px;
  }
