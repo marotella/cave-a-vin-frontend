@@ -1,17 +1,17 @@
 
 import './App.css';
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import Navimage from "./components/Navimage"
 import Header from "./components/Header"
 import Footer from "./components/Footer"
 import Logo from "./components/Logo"
 import Home from "./pages/Home"
-import Wines from "./pages/Wines"
 import About from "./pages/About"
 import Register from "./pages/Register"
-// import Wines from "./pages/wines"
+import Wines from "./pages/Wines"
 // import Wine from "./pages/wine"
+
 import { useEffect, useState } from 'react';
 import { Route, Routes } from "react-router-dom"
 
@@ -39,13 +39,10 @@ function App() {
       <Header className='navheader' />
       <Logo />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/wines" element={<Wines wineData={wineData}/>}/>
         <Route exact path="/" element={<Home URL={URL}/>}/>
         <Route exact path="/about" element={<About URL={URL}/>}/>
         <Route exact path="/register" element={<Register URL={URL}/>}/>
-        {/* <Route exact path="/wines" element={<Wines URL={URL}/>}/> */}
-
+        <Route exact path="/wines" element={<Wines wineData={wineData}URL={URL}/>}/>
       </Routes>
       <Footer />
     </div>
