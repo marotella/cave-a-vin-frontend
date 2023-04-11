@@ -335,6 +335,15 @@ footer {
   list-style: none;
  }
 
+.linkToShow {
+  color: white;
+  text-decoration: none;
+}
+
+.linkToShow:hover {
+  color: white;
+  text-decoration: underline;
+}
  .box1 {
   height:300px;
   width:450px;
