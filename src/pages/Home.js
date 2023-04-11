@@ -5,7 +5,7 @@ function Home() {
    
         <div className="container1" style={{ width: "60%" }}>
         <div> 
-        <h2>From Our Cellar to Your Glass..</h2>
+        <h2>From Our Cellar to Your Glass...</h2>
         </div>
             <p className="quote">"Drinking good wine with good food in good company is one of life’s most civilized pleasures."</p>
             <p className="author">-Michael Broadbent</p>

@@ -329,3 +329,13 @@ footer {
  li {
   list-style: none;
  }
+
+.linkToShow {
+  color: white;
+  text-decoration: none;
+}
+
+.linkToShow:hover {
+  color: white;
+  text-decoration: underline;
+}
