@@ -20,13 +20,16 @@ function App() {
   const URL = "http://localhost:4000/"
   const [wineData, setWineData] = React.useState(null)
   const getWineData = async () => {
-    const response = await fetch (
-      "https://api.sampleapis.com/wines/reds"
-    )
-    const data =await response.json()
-    setWineData(data)
-    console.log(data)
-  }
+      const redWineResponse = await fetch("https://api.sampleapis.com/wines/reds")
+      const redWineData = await redWineResponse.json()
+    
+      const whiteWineResponse = await fetch("https://api.sampleapis.com/wines/whites")
+      const whiteWineData = await whiteWineResponse.json()
+    
+      const combinedWineData = [...redWineData, ...whiteWineData]
+      setWineData(combinedWineData)
+      console.log(combinedWineData)
+    }
   React.useEffect(()=> {
     getWineData();},
     [])
