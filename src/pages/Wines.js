@@ -5,9 +5,13 @@ import Wine from "../components/Wine"
 const Wines = (props) => {
   // loaded function
   const loaded = () => {
-    return(<div className="wineIndex"> {props.wineData.map((wineData) => (
+    return(
+      <div className="new">
+      <a href='/new' className="plus" title="Add a New Wine">+</a>
+    <div className="wineIndex"> {props.wineData.map((wineData) => (
         <Wine {...wineData} />
     ))}
+    </div>
     </div>)
   };
 
