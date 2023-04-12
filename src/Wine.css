@@ -1,0 +1,58 @@
+li {
+  color: #444;
+}
+
+.starRating {
+  color: gold;
+}
+
+.ratingText {
+  font-size: 14px;
+  color: #999;
+}
+
+img {
+  max-width: 300px;
+  border-radius: 10px;
+} 
+
+.wineDetails {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  border: 1px solid #444;
+  border-radius: 0px;
+  padding: 20px;
+}
+
+.starRating {
+  font-size: 1.2rem;
+  display: inline-block;
+}
+
+.stars-outer {
+  position: relative;
+  display: inline-block;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: #ccc;
+}
+
+.stars-outer::before {
+  content: "\2605\2605\2605\2605\2605";
+}
+
+.stars-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  color: gold;
+}
+
+.stars-inner::before {
+  content: "\2605\2605\2605\2605\2605";
+} 
