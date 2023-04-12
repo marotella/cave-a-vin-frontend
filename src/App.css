@@ -370,7 +370,7 @@ footer {
   text-align:center;
   padding-top:60px;
   display:flex;
-  /* margin-bottom:-50%; */
+
  }
  .p1 {
   background-image: url("../public/purplegrape.jpeg");
@@ -408,7 +408,7 @@ footer {
   bottom:262%;
   margin:70px;
   left:40%;
-
+ 
  }
 
  .cheese {
@@ -421,7 +421,7 @@ footer {
   height:700px;
   width:100%;
 
-  margin-top:-60%;
+  margin-top:-50%;
  }
  .process {
   text-align:center;
