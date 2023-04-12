@@ -23,7 +23,9 @@ function Register() {
             </div>
             </form>
         </span>
+        
         </div>
+        
      )
   }
   export default Register;
