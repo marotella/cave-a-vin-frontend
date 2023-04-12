@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-//I created a separate css file for this page
+import { useParams, useNavigate } from "react-router-dom";
 import "../Wine.css";
 
 const Wine = (props) => {
+  const [enlarged, setEnlarged] = useState(false); // move useState here
   const [wine, setWine] = useState(null);
   const { id } = useParams();
+  const navigate = useNavigate();
 
   //fetch wine data from API
   useEffect(() => {
@@ -41,27 +42,48 @@ const Wine = (props) => {
   };
 
   const loaded = () => {
+    const prevId = wine.id - 1;
+    const nextId = wine.id + 1;
     return (
       <div className="wineDetails">
         <ul>
           <li>
-            <img src={wine.image} alt={wine.wine} />
+            <img
+              src={wine.image}
+              alt={wine.wine}
+              onClick={() => setEnlarged(!enlarged)}
+              className={enlarged ? "enlarged" : ""}
+            />
           </li>
         </ul>
-        <ul>
-  <li>Winery: {wine.winery}</li>
-  <li>Wine: {wine.wine}</li>
-  <li style={{ marginBottom: "40px" }}>Location: {wine.location}</li>
-  <li>
-    <span className="ratingStars">{starRating(wine.rating.average)}</span>
-    <span className="ratingText">
-      ({Number(wine.rating.average).toFixed(1)}) ({wine.rating.reviews})
-    </span>
-  </li>
-</ul>
-
+        <ul className="wineDetailsList">
+          <li>{wine.wine}</li>
+          <li>Winery: {wine.winery}</li>
+          <li style={{ marginBottom: "40px" }}>Location: {wine.location}</li>
+          <li>
+            <span className="ratingStars">
+              {starRating(wine.rating.average)}
+            </span>
+            <span className="ratingText">
+              ({Number(wine.rating.average).toFixed(1)}) ({wine.rating.reviews})
+            </span>
+          </li>
+          <li className="buttonContainer">
+            <button
+              className="arrowButton"
+              onClick={() => navigate(`/wines/${prevId}`)}
+            >
+              {"Previous"}
+            </button>
+            <button
+              className="arrowButton"
+              onClick={() => navigate(`/wines/${nextId}`)}
+            >
+              {"Next"}
+            </button>
+          </li>
+        </ul>
       </div>
-      
     );
   };
 
