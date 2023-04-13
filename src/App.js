@@ -11,6 +11,7 @@ import About from "./pages/About"
 import Register from "./pages/Register"
 import Wines from "./pages/Wines"
 import Wine from "./pages/Wine"
+import New from "./pages/New"
 
 import { useEffect, useState } from 'react';
 import { Route, Routes } from "react-router-dom"
@@ -42,6 +43,7 @@ function App() {
         <Route exact path="/" element={<Home URL={URL}/>}/>
         <Route exact path="/about" element={<About URL={URL}/>}/>
         <Route exact path="/register" element={<Register URL={URL}/>}/>
+        <Route exact path="/new" element={<New URL={URL}/>}/>
         <Route exact path="/wines" element={<Wines wineData={wineData}URL={URL}/>}/>
         <Route exact path="/wines/:id" element={<Wine wineData={wineData}URL={URL}/>}/>
       </Routes>
