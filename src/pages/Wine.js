@@ -8,15 +8,26 @@ const Wine = (props) => {
   const { id } = useParams();
   const navigate = useNavigate();
 
+   //delete wine on button press
+   const removeWine = async (e) => {
+    e.preventDefault();
+    await props.deleteWine(wine.id);
+    props.getWineData();
+    navigate("/wines");
+  };
   //fetch wine data from API
   useEffect(() => {
     const fetchWineData = async () => {
       try {
-        const response = await fetch(
-          `https://api.sampleapis.com/wines/reds/${id}`
-        );
-        const data = await response.json();
-        setWine(data);
+        const [redResponse, whiteResponse] = await Promise.all([
+          fetch(`https://api.sampleapis.com/wines/reds/${id}`),
+          fetch(`https://api.sampleapis.com/wines/whites/${id}`),
+        ]);
+        const [redData, whiteData] = await Promise.all([
+          redResponse.json(),
+          whiteResponse.json(),
+        ]);
+        setWine({ ...redData, ...whiteData });
       } catch (error) {
         console.log(error);
       }
@@ -82,8 +93,11 @@ const Wine = (props) => {
               {"Next"}
             </button>
           </li>
+          <li>
+            <button id="delete" onClick={removeWine}>DELETE</button>
+          </li>
         </ul>
-      </div>
+\      </div>
     );
   };
 

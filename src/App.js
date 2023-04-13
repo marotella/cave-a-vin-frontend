@@ -21,17 +21,28 @@ function App() {
   const URL = "http://localhost:4000/"
   const [wineData, setWineData] = React.useState(null)
   const getWineData = async () => {
-    const response = await fetch (
-      "https://api.sampleapis.com/wines/reds"
-    )
-    const data =await response.json()
-    setWineData(data)
-    console.log(data)
-  }
+      const redWineResponse = await fetch("https://api.sampleapis.com/wines/reds")
+      const redWineData = await redWineResponse.json()
+    
+      const whiteWineResponse = await fetch("https://api.sampleapis.com/wines/whites")
+      const whiteWineData = await whiteWineResponse.json()
+    
+      const combinedWineData = [...redWineData, ...whiteWineData]
+      setWineData(combinedWineData)
+      console.log(combinedWineData)
+    }
   React.useEffect(()=> {
     getWineData();},
     [])
-  
+  const deleteWine = async (id) => {
+      //make delete req to delete a wine
+      await fetch(URL + id, {
+          method: "DELETE",
+      })
+      //update list of wines
+      getWineData()
+  }
+
   return (
     <div>
       <div className='Nav'>
@@ -45,7 +56,7 @@ function App() {
         <Route exact path="/register" element={<Register URL={URL}/>}/>
         <Route exact path="/new" element={<New URL={URL}/>}/>
         <Route exact path="/wines" element={<Wines wineData={wineData}URL={URL}/>}/>
-        <Route exact path="/wines/:id" element={<Wine wineData={wineData}URL={URL}/>}/>
+        <Route exact path="/wines/:id" element={<Wine wineData={wineData}URL={URL}deleteWine={deleteWine} getWineData={getWineData}/>}/>
       </Routes>
       <Footer />
     </div>
