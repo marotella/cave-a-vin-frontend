@@ -41,43 +41,53 @@ function New(props) {
   };
   return (
     <section>
-      <form onSubmit={handleSubmit}>
+      <div className='style'></div>
+      <form className="form" onSubmit={handleSubmit}>
         <input
           type="text"
-          value={newForm.wine}
-          wine="wine"
-          placeholder="name"
+          className="formitems"
+          value={newForm.name}
+          name="winery"
+          placeholder="winery"
           onChange={handleChange}
         />
         <input
           type="text"
-          value={newForm.image}
+          className="formitems"
+          value={newForm.name}
+          name="wine"
+          placeholder="wine"
+          onChange={handleChange}
+        />
+        <input
+          type="text"
+          className="formitems"
+          value={newForm.name}
+          name="rating"
+          placeholder="rating"
+          onChange={handleChange}
+        />
+        <input
+          type="text"
+          className="formitems"
+          value={newForm.name}
+          name="location"
+          placeholder="location"
+          onChange={handleChange}
+        />
+        <input
+          type="text"
+          className="formitems"
+          value={newForm.name}
           name="image"
           placeholder="image URL"
           onChange={handleChange}
         />
-        <input
-          type="text"
-          value={newForm.title}
-          name="title"
-          placeholder="title"
-          onChange={handleChange}
-        />
-        <input type="submit" value="Create Wine" />
+     
+        <input className="create" type="submit" value="Create Wine" />
       </form>
       {props.wines ? loaded() : loading()}
     </section>
   );
 }
 export default New;
-
-
-//   winery: String,
-//   wine: String,
-//   rating: {
-//       average: String,
-//       reviews: String,
-//   },
-//   location: String,
-//   image: String,
-//   id: Number,
