@@ -11,7 +11,7 @@ const Wine = (props) => {
    //delete wine on button press
    const removeWine = async (e) => {
     e.preventDefault();
-    await props.deleteWine(wine._id);
+    await props.deleteWine(wine.id);
     props.getWineData();
     navigate("/wines");
   };
