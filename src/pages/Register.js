@@ -1,65 +1,32 @@
-import { useState } from 'react'
-import { Link } from 'react-router-dom'
 
-const Register = (props) => {
-  const [newForm, setNewForm] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    password: "",
-  });
-
-  const handleChange = (event) => {
-    setNewForm({ ...newForm, [event.target.name]: event.target.value })
-  };
-
-  const handleSubmit = (event) => {
-    event.preventDefault()
-    props.signin(newForm)
-    setNewForm({
-      firstName: "",
-      lastName: "",
-      email: "",
-      password: "",
-    });
-  };
-
-  return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          value={newForm.firstName}
-          name="firstName"
-          placeholder="First Name"
-          onChange={handleChange}
-
-        /> 
-        <input
-          type="text"
-          value={newForm.lastName}
-          name="lastName"
-          placeholder="Last Name"
-          onChange={handleChange}
-        />
-        <input
-          type="text"
-          value={newForm.email}
-          name="email"
-          placeholder="email"
-          onChange={handleChange}
-        />
-        <input
-          type="text"
-          value={newForm.password}
-          name="password"
-          placeholder="Password"
-          onChange={handleChange}
-        />
-        <button type="submit" value="Signin">Submit</button>
-      </form>
-    </div>
-  );
-};
-
-export default Register;
+function Register() {
+    return (
+        <div className="user" >
+        <span className="signup">
+            <form>
+            <h3 className="register" style={{ color: "#861c1c"}}>Register</h3><br></br>
+            <input type="text" class="form-control" style={{ width: "400px"}} placeholder="First name" aria-label="First name"></input><br></br>
+            <input type="text" class="form-control" style={{ width: "400px"}} placeholder="Last name" aria-label="Last name"></input><br></br>
+            <input type="email" class="form-control" style={{ width: "400px"}} id="exampleInputEmail1" placeholder="Email" aria-describedby="emailHelp"></input><br></br>
+            <input type="password" class="form-control" style={{ width: "400px"}} id="exampleInputEmail1" placeholder="Password" aria-describedby="password"></input><br></br>
+            <div class="col-auto">
+            <button type="submit" style={{ backgroundColor: "#861c1c", border:"2px solid #861c1c", left:"20%" }} class="btn btn-primary mb-3" onclick="subscribed()">Sign up</button>
+            </div>
+            </form>
+        </span>
+        <span className="signin">
+            <form>
+            <h3 className="register" style={{ color: "#861c1c"}}>Sign in</h3><br></br>
+            <input type="email" style={{ width: "400px"}} class="form-control" id="exampleInputEmail1" placeholder="Email" aria-describedby="emailHelp"></input><br></br>
+            <input type="password" style={{ width: "400px"}} class="form-control" id="exampleInputEmail1" placeholder="Password" aria-describedby="password"></input><br></br>
+            <div class="col-auto">
+            <button type="submit" style={{ backgroundColor: "#861c1c", border:"2px solid #861c1c", left:"20%" }} class="btn btn-primary mb-3" onclick="subscribed()">Log in</button>
+            </div>
+            </form>
+        </span>
+        
+        </div>
+        
+     )
+  }
+  export default Register;
