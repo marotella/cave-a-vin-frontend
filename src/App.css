@@ -458,3 +458,50 @@ a[title]:hover:after {
   left: 20%;
   top:100%;
 }
+
+.form {
+  padding:3%;
+  background-color: white;
+}
+.formitems {
+  margin:2%;
+  margin-left:10%;
+  border-radius: 10px;
+  height:35px;
+  display:block;
+  background-color: rgb(246, 219, 219);
+  border:2px solid #729368;
+
+}
+.create {
+  background-color:#729368;
+  border-radius: 100px;
+  box-shadow: rgb(59, 89, 71) 0 -25px 18px -14px inset,rgba(58,89,71) 0 1px 2px,rgba(58,89,71) 0 2px 4px,rgba(58,89,71) 0 4px 8px;  color: white;
+  cursor: pointer;
+  display: inline-block;
+  padding: 7px 20px;
+  text-align: center;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+  margin-top:5px;
+  margin-left:9%;
+  position:relative;
+  left:2%;
+}
+.create:hover {
+  box-shadow: rgb(59, 89, 71) 0 -25px 18px -14px inset,rgba(58,89,71) 0 1px 2px,rgba(58,89,71) 0 2px 4px,rgb(189, 193, 190) 0 4px 8px;  transform: scale(1.05) rotate(0deg);
+}
+
+.style {
+  background-image: url("../public/cheeseplate.jpeg");
+  background-size:100%;
+  background-position: center;
+  background-repeat:no-repeat;
+  height:350px;
+  width:800px;
+  position:absolute;
+  left:40%;
+  margin-top:5%;
+
+}
