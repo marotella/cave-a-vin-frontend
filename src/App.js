@@ -23,14 +23,20 @@ function App() {
   const getWineData = async () => {
       const redWineResponse = await fetch("https://api.sampleapis.com/wines/reds")
       const redWineData = await redWineResponse.json()
-    
+      console.log(redWineData)
       const whiteWineResponse = await fetch("https://api.sampleapis.com/wines/whites")
       const whiteWineData = await whiteWineResponse.json()
+      console.log(whiteWineData)
+      const combinedWineData = [...redWineData, ...whiteWineData].map((wine, index) => {
+        return {
+          ...wine,
+          id: index + 1 // Assign a unique ID to each wine, starting from 1
+        };
+      });
     
-      const combinedWineData = [...redWineData, ...whiteWineData]
-      setWineData(combinedWineData)
-      console.log(combinedWineData)
-    }
+      setWineData(combinedWineData);
+      console.log(wineData)
+    };
   React.useEffect(()=> {
     getWineData();},
     [])
