@@ -9,7 +9,6 @@ const Wine = (props) => {
   const navigate = useNavigate();
 
   const removeWine = async (e) => {
-  const removeWine = async (e) => {
     e.preventDefault();
     await props.deleteWine(wine.id);
     props.getWineData();
