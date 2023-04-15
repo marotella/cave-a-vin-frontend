@@ -1,8 +1,4 @@
 
-<<<<<<< HEAD
-=======
-
->>>>>>> d8acf8121d707024fed4c9c0156ff811d1979b26
 import './App.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -26,7 +22,6 @@ function App() {
   const [wineData, setWineData] = React.useState(null)
 
   const getWineData = async () => {
-<<<<<<< HEAD
       const redWineResponse = await fetch("https://api.sampleapis.com/wines/reds")
       const redWineData = await redWineResponse.json()
       console.log(redWineData)
@@ -46,29 +41,6 @@ function App() {
   React.useEffect(()=> {
     getWineData();},
     [])
-=======
-    const redWineResponse = await fetch("https://api.sampleapis.com/wines/reds")
-    const redWineData = await redWineResponse.json()
-    console.log(redWineData)
-    const whiteWineResponse = await fetch("https://api.sampleapis.com/wines/whites")
-    const whiteWineData = await whiteWineResponse.json()
-    console.log(whiteWineData)
-    const combinedWineData = [...redWineData, ...whiteWineData].map((wine, index) => {
-      return {
-        ...wine,
-        id: index + 1 // Assign a unique ID to each wine, starting from 1
-      };
-    });
-
-    setWineData(combinedWineData);
-    console.log(wineData)
-  };
-  React.useEffect(() => {
-    getWineData();
-  },
-    [])
-
->>>>>>> d8acf8121d707024fed4c9c0156ff811d1979b26
   const deleteWine = async (id) => {
     console.log(id)
     try {
