@@ -48,6 +48,14 @@ function App() {
       //update list of wines
       getWineData()
   }
+  const createWine = async (newWine) => {
+    await fetch (URL + newWine, {
+        method:"POST",
+      })
+
+      getWineData()
+    
+  }
 
   return (
     <div>
@@ -60,7 +68,7 @@ function App() {
         <Route exact path="/" element={<Home URL={URL}/>}/>
         <Route exact path="/about" element={<About URL={URL}/>}/>
         <Route exact path="/register" element={<Register URL={URL}/>}/>
-        <Route exact path="/new" element={<New URL={URL}/>}/>
+        <Route exact path="/new" element={<New URL={URL} createWine={createWine}/>}/>
         <Route exact path="/wines" element={<Wines wineData={wineData}URL={URL}/>}/>
         <Route exact path="/wines/:id" element={<Wine wineData={wineData}URL={URL}deleteWine={deleteWine} getWineData={getWineData}/>}/>
       </Routes>
