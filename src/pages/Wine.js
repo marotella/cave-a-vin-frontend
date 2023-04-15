@@ -82,5 +82,5 @@ const Wine = (props) => {
 
   return <div>{wine ? loaded() : loading()}</div>;
 };
-}
+
 export default Wine;
