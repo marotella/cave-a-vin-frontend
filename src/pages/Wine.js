@@ -1,4 +1,3 @@
-
 import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import "../Wine.css";
@@ -83,5 +82,5 @@ const Wine = (props) => {
 
   return <div>{wine ? loaded() : loading()}</div>;
 };
-
+}
 export default Wine;
