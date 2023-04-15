@@ -4,9 +4,7 @@ import "../Wine.css";
 
 const Wine = (props) => {
   const [enlarged, setEnlarged] = React.useState(false);
-  const [enlarged, setEnlarged] = React.useState(false);
   const { id } = useParams();
-  const wine = props.wineData.find(wine => wine.id == id);
   const wine = props.wineData.find(wine => wine.id == id);
   const navigate = useNavigate();
 
@@ -85,5 +83,5 @@ const Wine = (props) => {
 
   return <div>{wine ? loaded() : loading()}</div>;
 };
-
+}
 export default Wine;
