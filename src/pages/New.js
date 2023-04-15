@@ -2,18 +2,19 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 function New(props) {
-  // state to hold formData
+ 
   const [newForm, setNewForm] = useState({
     winery: "",
     wine: "",
     rating: "",
-    location: ""
+    location: "",
+    image: ""
   });
-  // handleChange function for form
+
   const handleChange = (event) => {
     setNewForm({ ...newForm, [event.target.name]: event.target.value });
   };
-  // handle submit function for form
+
   const handleSubmit = (event) => {
     event.preventDefault();
     props.createWine(newForm);
@@ -21,17 +22,18 @@ function New(props) {
       winery: "",
       wine: "",
       rating: "",
-      location: ""
+      location: "",
+      image: ""
     });
   };
-  // loaded function
+
   const loaded = () => {
-    return props.wines.map((wine) => (
+    return props.wineData.map((wine) => (
       <div key={wine._id} className="wine">
         <Link to={`/wines/${wine._id}`}>
           <h1>{wine.winery}</h1>
         </Link>
-        {/* <img src={person.image} alt={person.name} /> */}
+        <img src={wine.image} alt={wine.wine} />
         <h3>{wine.winery}</h3>
       </div>
     ));
@@ -42,7 +44,7 @@ function New(props) {
   return (
     <section>
       <div className='style'></div>
-      <form className="form" onSubmit={handleSubmit}>
+      <form className="form" onSubmit={handleSubmit} method ="POST">
         <input
           type="text"
           className="formitems"
@@ -86,7 +88,7 @@ function New(props) {
      
         <input className="create" type="submit" value="Create Wine" />
       </form>
-      {props.wines ? loaded() : loading()}
+      {props.wineData ? loaded() : loading()}
     </section>
   );
 }
