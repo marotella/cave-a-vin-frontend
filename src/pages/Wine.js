@@ -1,41 +1,20 @@
-import { useState, useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import React from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import "../Wine.css";
 
 const Wine = (props) => {
-  const [enlarged, setEnlarged] = useState(false); // move useState here
-  const [wine, setWine] = useState(null);
+  const [enlarged, setEnlarged] = React.useState(false);
   const { id } = useParams();
+  const wine = props.wineData.find(wine => wine.id == id);
   const navigate = useNavigate();
 
-   //delete wine on button press
-   const removeWine = async (e) => {
+  const removeWine = async (e) => {
     e.preventDefault();
     await props.deleteWine(wine.id);
     props.getWineData();
     navigate("/wines");
   };
-  //fetch wine data from API
-  useEffect(() => {
-    const fetchWineData = async () => {
-      try {
-        const [redResponse, whiteResponse] = await Promise.all([
-          fetch(`https://api.sampleapis.com/wines/reds/${id}`),
-          fetch(`https://api.sampleapis.com/wines/whites/${id}`),
-        ]);
-        const [redData, whiteData] = await Promise.all([
-          redResponse.json(),
-          whiteResponse.json(),
-        ]);
-        setWine({ ...redData, ...whiteData });
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    fetchWineData();
-  }, [id]);
 
-  //helper function to render star rating based on avg rating from wine API
   const starRating = (rating) => {
     const percentage = (rating / 5) * 100;
     return (
@@ -97,7 +76,7 @@ const Wine = (props) => {
             <button id="delete" onClick={removeWine}>DELETE</button>
           </li>
         </ul>
-\      </div>
+      </div>
     );
   };
 
