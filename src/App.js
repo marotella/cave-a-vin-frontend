@@ -23,27 +23,25 @@ function App() {
   const [wineData, setWineData] = React.useState(null)
 
   const getWineData = async () => {
-    const redWineResponse = await fetch("https://api.sampleapis.com/wines/reds")
-    const redWineData = await redWineResponse.json()
-    console.log(redWineData)
-    const whiteWineResponse = await fetch("https://api.sampleapis.com/wines/whites")
-    const whiteWineData = await whiteWineResponse.json()
-    console.log(whiteWineData)
-    const combinedWineData = [...redWineData, ...whiteWineData].map((wine, index) => {
-      return {
-        ...wine,
-        id: index + 1 // Assign a unique ID to each wine, starting from 1
-      };
-    });
-
-    setWineData(combinedWineData);
-    console.log(wineData)
-  };
-  React.useEffect(() => {
-    getWineData();
-  },
+      const redWineResponse = await fetch("https://api.sampleapis.com/wines/reds")
+      const redWineData = await redWineResponse.json()
+      console.log(redWineData)
+      const whiteWineResponse = await fetch("https://api.sampleapis.com/wines/whites")
+      const whiteWineData = await whiteWineResponse.json()
+      console.log(whiteWineData)
+      const combinedWineData = [...redWineData, ...whiteWineData].map((wine, index) => {
+        return {
+          ...wine,
+          id: index + 1 // Assign a unique ID to each wine, starting from 1
+        };
+      });
+    
+      setWineData(combinedWineData);
+      console.log(wineData)
+    };
+  React.useEffect(()=> {
+    getWineData();},
     [])
-
   const deleteWine = async (id) => {
     console.log(id)
     try {
