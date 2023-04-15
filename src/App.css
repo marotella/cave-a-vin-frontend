@@ -233,7 +233,7 @@ h2:last-of-type h2 {
   background-size:70%;
   background-position: left center;
   background-repeat:no-repeat;
-  height:700px;
+  height:750px;
   width:800px;
   position:absolute;
   left:4%;
@@ -465,13 +465,11 @@ a[title]:hover:after {
 }
 .formitems {
   margin:2%;
-  margin-left:10%;
   border-radius: 10px;
   height:35px;
   display:block;
-  background-color: rgb(246, 219, 219);
+  width:400px;
   border:2px solid #729368;
-
 }
 .create {
   background-color:#729368;
@@ -489,6 +487,7 @@ a[title]:hover:after {
   position:relative;
   left:2%;
 }
+
 .create:hover {
   box-shadow: rgb(59, 89, 71) 0 -25px 18px -14px inset,rgba(58,89,71) 0 1px 2px,rgba(58,89,71) 0 2px 4px,rgb(189, 193, 190) 0 4px 8px;  transform: scale(1.05) rotate(0deg);
 }
@@ -503,5 +502,4 @@ a[title]:hover:after {
   position:absolute;
   left:40%;
   margin-top:5%;
-
 }
