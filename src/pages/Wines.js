@@ -3,14 +3,15 @@ import { Link } from "react-router-dom"
 import Wine from "../components/Wine"
 
 const Wines = (props) => {
-  // loaded function
+  console.log(props.wineData) //confirms that data is bieng passesd
+  // loaded function, NOTE: Need to use wineData.data to access the array inside the object. If not, it will not be able to use .map method
   const loaded = () => {
     return(
       <div className="new">
       <a href='/new' className="plus" title="Add a New Wine">+</a>
-    <div className="wineIndex"> {props.wineData.map((wineData) => (
+    <div className="wineIndex"> {props.wineData.data.map((wineData) => (
         <Wine {...wineData} />
-    ))}
+    ))} 
     </div>
     </div>)
   };
