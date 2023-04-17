@@ -7,15 +7,15 @@ import "../Wine.css";
 const Wine = ({wineData, deleteWine, getWineData}) => {
   const [enlarged, setEnlarged] = React.useState(false);
   //use the param to match the id in the database
-  const { id } = useParams();
+  const { _id } = useParams();
   //checks that the wine data is loaded and then looks for the wine that matches the param of id.
-  const wine = wineData?.data.find(wine => wine.id == id);
+  const wine = wineData?.data.find(wine => wine._id == _id);
   const navigate = useNavigate();
 
   //used to remove a wine form the data base, not yet functional.
   const removeWine = async (e) => {
     e.preventDefault();
-    await deleteWine(wine.id);
+    await deleteWine(wine._id);
     getWineData();
     navigate("/wines");
   };
@@ -37,8 +37,8 @@ const Wine = ({wineData, deleteWine, getWineData}) => {
   };
 
   const loaded = () => {
-    const prevId = wine.id - 1;
-    const nextId = wine.id + 1;
+    // const prevId = wine.id - 1;
+    // const nextId = wine.id + 1;
     return (
       <div className="wineDetails">
         <ul>
@@ -65,14 +65,14 @@ const Wine = ({wineData, deleteWine, getWineData}) => {
           </li>
           <li className="buttonContainer">
             <button
-              className="arrowButton"
-              onClick={() => navigate(`/wines/${prevId}`)}
+              // className="arrowButton"
+              // onClick={() => navigate(`/wines/${prevId}`)}
             >
               {"Previous"}
             </button>
             <button
-              className="arrowButton"
-              onClick={() => navigate(`/wines/${nextId}`)}
+              // className="arrowButton"
+              // onClick={() => navigate(`/wines/${nextId}`)}
             >
               {"Next"}
             </button>
