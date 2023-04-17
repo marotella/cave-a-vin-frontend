@@ -12,6 +12,8 @@ import Register from "./pages/Register"
 import Wines from "./pages/Wines"
 import Wine from "./pages/Wine"
 import New from "./pages/New"
+import Edit from "./pages/Edit"
+
 
 import { useEffect, useState } from 'react';
 import { Route, Routes } from "react-router-dom"
@@ -58,6 +60,30 @@ function App() {
     }
     console.log(wineData)
 
+    //update
+    const updateWine = async (_id, updatedWine) => {
+      try {
+        const response = await fetch(`${URL}wines/${_id}`, {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(updatedWine),
+        });
+        if (!response.ok) {
+          throw new Error("Failed to update wine");
+        }
+        getWineData();
+      } catch (error) {
+        console.error(error);
+      }
+    };
+  
+    useEffect(() => {
+      getWineData();
+    }, []);
+    //
+
 return (
   <div>
     <div className='Nav'>
@@ -72,6 +98,8 @@ return (
       <Route exact path="/new" element={<New URL={URL} createWine={createWine}/>} />
       <Route exact path="/wines" element={<Wines wineData={wineData} URL={URL} />} />
       <Route exact path="/wines/:_id" element={<Wine wineData={wineData} URL={URL} deleteWine={deleteWine} getWineData={getWineData} />} />
+      <Route exact path="/wines/:_id/edit" element={<Edit wineData={wineData} updateWine={updateWine} />} />
+
     </Routes>
     <Footer />
   </div>

@@ -83,6 +83,7 @@ const Wine = ({wineData, deleteWine, getWineData}) => {
           </li>
           <li>
             <button id="delete" onClick={removeWine}>DELETE</button>
+            <button id="edit" onClick={() => navigate(`/wines/${_id}/edit`)}>EDIT</button>
           </li>
         </ul>
       </div>
