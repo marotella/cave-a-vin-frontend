@@ -37,8 +37,12 @@ const Wine = ({wineData, deleteWine, getWineData}) => {
   };
 
   const loaded = () => {
-    // const prevId = wine.id - 1;
-    // const nextId = wine.id + 1;
+    const currentIndex = wineData.data.findIndex(wine => wine._id == _id);
+    const prevIndex = currentIndex > 0 ? currentIndex - 1 : wineData.data.length - 1;
+    const nextIndex = currentIndex < wineData.data.length - 1 ? currentIndex + 1 : 0;
+    const prevId = wineData.data[prevIndex]._id;
+    const nextId = wineData.data[nextIndex]._id;
+   
     return (
       <div className="wineDetails">
         <ul>
@@ -65,20 +69,21 @@ const Wine = ({wineData, deleteWine, getWineData}) => {
           </li>
           <li className="buttonContainer">
             <button
-              // className="arrowButton"
-              // onClick={() => navigate(`/wines/${prevId}`)}
+              className="arrowButton"
+              onClick={() => navigate(`/wines/${prevId}`)}
             >
               {"Previous"}
             </button>
             <button
-              // className="arrowButton"
-              // onClick={() => navigate(`/wines/${nextId}`)}
+              className="arrowButton"
+              onClick={() => navigate(`/wines/${nextId}`)}
             >
               {"Next"}
             </button>
           </li>
           <li>
-            <button id="delete" className="create" onClick={removeWine}>DELETE</button>
+            <button id="delete" onClick={removeWine}>DELETE</button>
+            <button id="edit" onClick={() => navigate(`/wines/${_id}/edit`)}>EDIT</button>
           </li>
         </ul>
       </div>
