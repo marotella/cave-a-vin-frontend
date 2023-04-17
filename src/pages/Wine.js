@@ -1,18 +1,22 @@
-
 import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import "../Wine.css";
 
-const Wine = (props) => {
+
+//pass down the props in the app.js so that we can display individual data and delete. We will need to add in update when we are ready
+const Wine = ({wineData, deleteWine, getWineData}) => {
   const [enlarged, setEnlarged] = React.useState(false);
+  //use the param to match the id in the database
   const { id } = useParams();
-  const wine = props.wineData.find(wine => wine.id == id);
+  //checks that the wine data is loaded and then looks for the wine that matches the param of id.
+  const wine = wineData?.data.find(wine => wine.id == id);
   const navigate = useNavigate();
 
+  //used to remove a wine form the data base, not yet functional.
   const removeWine = async (e) => {
     e.preventDefault();
-    await props.deleteWine(wine.id);
-    props.getWineData();
+    await deleteWine(wine.id);
+    getWineData();
     navigate("/wines");
   };
 
