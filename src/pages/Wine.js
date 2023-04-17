@@ -78,7 +78,7 @@ const Wine = ({wineData, deleteWine, getWineData}) => {
             </button>
           </li>
           <li>
-            <button id="delete" onClick={removeWine}>DELETE</button>
+            <button id="delete" className="create" onClick={removeWine}>DELETE</button>
           </li>
         </ul>
       </div>
