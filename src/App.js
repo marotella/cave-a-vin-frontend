@@ -36,10 +36,10 @@ function App() {
   React.useEffect(()=> {
     getWineData();},
     [])//prompts react to pull the data once and not throw an error as it loads
-  const deleteWine = async (id) => {
-    console.log(id)
+  const deleteWine = async (_id) => {
+    console.log(_id)
     try {
-      const response = await fetch(`${URL}wines/${id}`, {
+      const response = await fetch(`${URL}wines/${_id}`, {
         method: "DELETE",
       });
       if (!response.ok) {
@@ -71,7 +71,7 @@ return (
       <Route exact path="/register" element={<Register URL={URL} />} />
       <Route exact path="/new" element={<New URL={URL} createWine={createWine}/>} />
       <Route exact path="/wines" element={<Wines wineData={wineData} URL={URL} />} />
-      <Route exact path="/wines/:id" element={<Wine wineData={wineData} URL={URL} deleteWine={deleteWine} getWineData={getWineData} />} />
+      <Route exact path="/wines/:_id" element={<Wine wineData={wineData} URL={URL} deleteWine={deleteWine} getWineData={getWineData} />} />
     </Routes>
     <Footer />
   </div>
