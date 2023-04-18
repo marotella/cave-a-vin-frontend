@@ -7,7 +7,8 @@ const New = ({wineData, createWine}) => {
   const navigate = useNavigate();
   const { _id } = useParams();
   const wine = wineData?.data.find((wine) => wine._id == _id);
-  const [wineForm, setWineForm] = React.useState(wine);
+  const [wineForm, setWineForm] = React.useState({ ...wine,
+    rating: wine?.rating ?? {}});
 
 const handleSubmit = async(e) => {
   e.preventDefault();
@@ -16,8 +17,22 @@ const handleSubmit = async(e) => {
 };
 
 const handleChange = (e) => {
-  setWineForm({ ...wineForm, [e.target.name]: e.target.value });
+  if (e.target.name === "average") {
+    setWineForm({
+      ...wineForm,
+      rating: { ...(wineForm.rating || {}), average: e.target.value }
+    });
+  } else if (e.target.name === "reviews") {
+    setWineForm({
+      ...wineForm,
+      rating: { ...(wineForm.rating || {}), reviews: e.target.value }
+    });
+  } else {
+    setWineForm({ ...wineForm, [e.target.name]: e.target.value, rating: wineForm?.rating || {} });
+  }
 };
+
+
 
  return (
   <div>
@@ -41,17 +56,19 @@ const handleChange = (e) => {
       placeholder="wine"
       onChange={handleChange}
         />
-        {/* <label htmlFor="rating">Rating: </label>
+        <label htmlFor="average">Rating: </label>
       <input
       type="number"
-      name="rating"
+      name="average"
       min="0"
       max="5"
       step="0.1"
       className="formitems"
-      value={wineForm?.average || ""}
+      value={wineForm?.rating?.average || ""}
       placeholder="rating"
-      onChange={(e) => setWineForm({ ...wineForm, rating: { average: e.target.value, reviews: wineForm.rating.reviews },})}
+      onChange={handleChange}
+
+      // onChange={(e) => setWineForm({ ...wineForm, rating: { average: e.target.value, reviews: wineForm.rating.reviews },})}
         />
       <label htmlFor="reviews">Number of Reviews: </label>
       <input
@@ -60,11 +77,13 @@ const handleChange = (e) => {
       min="0"
        max="5"
       step="0.1"
-      value={wineForm?.reviews || ""}
+      value={wineForm?.rating?.reviews || ""}
       name="reviews"
       placeholder="Number of Reviews"
-      onChange={(e) => setWineForm({ ... wineForm, rating: { average: wineForm.rating.average, reviews: e.target.value },})}
-        /> */}
+      onChange={handleChange}
+
+      // onChange={(e) => setWineForm({ ... wineForm, rating: { average: wineForm.rating.average, reviews: e.target.value },})}
+        />
         <label htmlFor="location">Location: </label>
       <input
       type="text"
@@ -91,6 +110,8 @@ const handleChange = (e) => {
   </div>
  )
 }
+
+export default New;
 
 // function New(props) {
  
@@ -184,4 +205,3 @@ const handleChange = (e) => {
 //     </section>
 //   );
 // }
-export default New;
