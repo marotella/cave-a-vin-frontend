@@ -551,3 +551,58 @@ button[title]:hover:after {
   left:40%;
   margin-top:5%;
 }
+@media (max-width: 768px) {
+  .container1 {
+    background-size:0%;
+  }
+
+  .span1 {
+   background-color:rgb(170, 202, 170);
+   opacity:0.9;
+   display:block;
+   z-index:1;
+   height:150px;
+   width:400px;
+   margin-top: 5%;
+
+  }
+  .p1{
+    position:relative;
+    left:-15%;
+  }
+  .span2 {
+    background-color:rgb(170, 202, 170);
+    opacity:0.9;
+    display:block;
+    z-index:1;
+    height:200px;
+    width:400px;
+    margin-top: 5%;
+ 
+   }
+   .p2{
+     position:relative;
+     left:-15%;
+   }
+   .span3 {
+    background-color:rgb(170, 202, 170);
+    opacity:0.9;
+    display:block;
+    z-index:1;
+    height:200px;
+    width:400px;
+    margin-top: 5%;
+ 
+   }
+   .p3{
+     position:relative;
+     left:-15%;
+   }
+
+.container6 {
+  position:relative;
+  left:100%;
+  background-size:100% 100%;
+}
+
+}

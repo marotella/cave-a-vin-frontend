@@ -17,17 +17,17 @@ function Home() {
         {/* <div className="container3" style={{ width: "50%" }}><p>hello container3</p></div> */}
         <div className="container4"><h3 className="process">The Wine Making Process</h3>
             <div className="box1">
-                <span>
+                <span className="span1">
                 <h4>Harvesting and Crushing</h4> Grapes are harvested from the vineyard and transported to the winery where they are crushed to extract the juice. This process can be done either by hand or by using specialized machinery.
                 </span>
             </div>
             <div className="box2">
-                <span>
+                <span className="span2">
                 <h4>Fermentation</h4> The extracted grape juice is then transferred to a fermentation tank where yeast is added to the juice. Yeast converts the natural sugar in the grape juice into alcohol and carbon dioxide. This process can take anywhere from several days to several weeks depending on the desired alcohol content and flavor profile.
                 </span>
             </div>
             <div className="box3">
-                <span>
+                <span className="span3">
                 <h4>Aging and Bottling</h4> After fermentation is complete, the wine is transferred to oak barrels or stainless steel tanks for aging. The aging process allows the wine to develop its characteristic flavor and aroma. Once the aging process is complete, the wine is bottled and ready to be enjoyed.
                 </span>
             </div>
