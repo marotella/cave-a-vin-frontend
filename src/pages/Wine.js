@@ -3,7 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import "../Wine.css";
 
 
-//pass down the props in the app.js so that we can display individual data and delete. We will need to add in update when we are ready
+//pass down the props in the app.js so that we can display individual data, delete and updated
 const Wine = ({wineData, deleteWine, getWineData}) => {
   const [enlarged, setEnlarged] = React.useState(false);
   //use the param to match the id in the database
@@ -19,7 +19,7 @@ const Wine = ({wineData, deleteWine, getWineData}) => {
     getWineData();
     navigate("/wines");
   };
-
+//changes the numerical rating value into a likert 5 star scale
   const starRating = (rating) => {
     const percentage = (rating / 5) * 100;
     return (

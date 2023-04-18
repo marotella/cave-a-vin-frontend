@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
+//Allows the user to create a new entry for a wine they enjoy
 function New(props) {
  
+  // for the form state
   const [newForm, setNewForm] = useState({
     winery: "",
     wine: "",
@@ -11,10 +13,11 @@ function New(props) {
     image: ""
   });
 
+  //handler for the new form
   const handleChange = (event) => {
     setNewForm({ ...newForm, [event.target.name]: event.target.value });
   };
-
+//calls the create wine function on submit of the new form
   const handleSubmit = (event) => {
     event.preventDefault();
     props.createWine(newForm);
