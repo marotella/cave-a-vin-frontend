@@ -44,6 +44,7 @@ const Wine = ({wineData, deleteWine, getWineData}) => {
     const nextId = wineData.data[nextIndex]._id;
    
     return (
+      <section className="showSection">
       <div className="wineDetails">
         <ul>
           <li>
@@ -67,7 +68,7 @@ const Wine = ({wineData, deleteWine, getWineData}) => {
               ({Number(wine.rating.average).toFixed(1)}) ({wine.rating.reviews})
             </span>
           </li>
-          <li className="buttonContainer">
+          <li style={{ marginBottom: "20px" }} className="buttonContainer">
             <button
               className="arrowButton"
               onClick={() => navigate(`/wines/${prevId}`)}
@@ -83,10 +84,16 @@ const Wine = ({wineData, deleteWine, getWineData}) => {
           </li>
           <li>
             <button id="delete" onClick={removeWine}>DELETE</button>
+
             <button id="edit" onClick={() => navigate(`/wines/${_id}/edit`)}>EDIT</button>
+            {/* <button className="edit-button" onClick={() => navigate(`/wines/${_id}/edit`)}>
+            <img src="https://i.imgur.com/ZufHNsm.png" alt="Edit Wine" title="Edit" style={{ width: "20px", height: "20px" }}/>
+            </button> */}
+
           </li>
         </ul>
       </div>
+      </section>
     );
   };
 
