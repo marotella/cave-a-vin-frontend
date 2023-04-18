@@ -1,14 +1,20 @@
 import { useState } from "react";
 import { Link } from "react-router-dom"
+import React from "react";
 import Wine from "../components/Wine"
+import { useNavigate, useParams } from "react-router-dom";
 
 const Wines = (props) => {
   console.log(props.wineData) //confirms that data is bieng passesd
-  // loaded function, NOTE: Need to use wineData.data to access the array inside the object. If not, it will not be able to use .map method
+  const { _id } = useParams();
+  const navigate = useNavigate();
+  
+  
   const loaded = () => {
     return(
       <div className="new">
-      <a href='/new' className="plus" title="Add a New Wine">+</a>
+
+      <button className="plus" title="Add a New Wine" onClick={() => navigate(`/wines/${_id}/new`)}>+</button>
     <div className="wineIndex"> {props.wineData.data.map((wineData) => (
         <Wine {...wineData} />
     ))} 
