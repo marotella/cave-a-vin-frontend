@@ -41,7 +41,7 @@ function App() {
   const deleteWine = async (_id) => {
     console.log(_id)
     try {
-      const response = await fetch(`${URL}wines/${_id}`, {
+      const response = await fetch(`${URL}/wines/${_id}`, {
         method: "DELETE",
       });
       if (!response.ok) {
@@ -55,7 +55,7 @@ function App() {
     //create
     const createWine = async (_id, createdWine) => {
       try{
-        const response = await fetch (`${URL}wines/${_id}`, {
+        const response = await fetch (`${URL}/wines/${_id}`, {
           method:"POST",
           headers: {
             "Content-Type": "application/json",
@@ -74,7 +74,7 @@ function App() {
     //update
     const updateWine = async (_id, updatedWine) => {
       try {
-        const response = await fetch(`${URL}wines/${_id}`, {
+        const response = await fetch(`${URL}/wines/${_id}`, {
           method: "PUT",
           headers: {
             "Content-Type": "application/json",
