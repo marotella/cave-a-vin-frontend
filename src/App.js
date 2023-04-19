@@ -41,7 +41,7 @@ function App() {
   const deleteWine = async (_id) => {
     console.log(_id)
     try {
-      const response = await fetch(`${URL}wines/${_id}`, {
+      const response = await fetch(`${URL}/wines/${_id}`, {
         method: "DELETE",
       });
       if (!response.ok) {
