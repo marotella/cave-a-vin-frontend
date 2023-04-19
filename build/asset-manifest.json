@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.73a4d1d6.css",
+    "main.js": "/static/js/main.99081c4a.js",
+    "static/js/787.cda612ba.chunk.js": "/static/js/787.cda612ba.chunk.js",
+    "static/media/cheeseplate.jpeg": "/static/media/cheeseplate.f3ee815031430ebcf8e1.jpeg",
+    "static/media/greengrapes2.jpeg": "/static/media/greengrapes2.7f52969ad224a1ea09ef.jpeg",
+    "static/media/purplegrape.jpeg": "/static/media/purplegrape.24acf6593c070b5900ca.jpeg",
+    "static/media/handgrapes.jpeg": "/static/media/handgrapes.b7fd81917143b2f6b9f4.jpeg",
+    "static/media/cheers.jpeg": "/static/media/cheers.452d07f58ee4fd4b91d1.jpeg",
+    "static/media/barrel2.jpeg": "/static/media/barrel2.71fede5639d371e5c755.jpeg",
+    "static/media/cheeseplate2.jpeg": "/static/media/cheeseplate2.f64c4882e2bfb92c2334.jpeg",
+    "static/media/background.jpeg": "/static/media/background.1336d492934a7126e582.jpeg",
+    "static/media/winepour2.png": "/static/media/winepour2.1fc9d982a1e25d532fe4.png",
+    "static/media/logo.png": "/static/media/logo.723749f4e2d3a5359490.png",
+    "index.html": "/index.html",
+    "main.73a4d1d6.css.map": "/static/css/main.73a4d1d6.css.map",
+    "main.99081c4a.js.map": "/static/js/main.99081c4a.js.map",
+    "787.cda612ba.chunk.js.map": "/static/js/787.cda612ba.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.73a4d1d6.css",
+    "static/js/main.99081c4a.js"
+  ]
+}
