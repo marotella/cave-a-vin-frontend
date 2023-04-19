@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+# cave-a-vin-backend
+CAVE A VIN (Wine cellar in French)
+A virtual wine cellar, where you can find, view, edit, add and delete wines. The application is a wine search and discovery platform built using the MERN-stack. Similar to Yelp, but specifically for wines, a virtual winery.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Technologies used are MERN-Stack; Node.js, Mongoose, Express, React and Bootstrap
+Adhered to the MVC file structure: Models, Views, Controllers
+Full CRUD operated.
+Included a third party API - https://sampleapis.com/api-list/wines
+Deployed online and accessible to the public via Heroku
+Used two git repositories (ONE for frontend and ONE for backend code)
 
-## Available Scripts
+Wine Schema includes:
+Winery: String
+Wine: String
+Image: String url
+Location: String
+Average Rating : Number
+Number of Ratings: Number
 
-In the project directory, you can run:
+Routes:
+Index: .get/wines/ Lists all of the current wines including Winery, wine and image
+Show: .get/wines/:id Show's wine information including an image for each wine, winery, location and rating
+Create: .post/wines/ creates a new wine
+Update: .put/wines/:id/edit Changes values of a wine
+Delete: .delete/wines/:id Removes a wine from the database
+Home: .get/ Home route with a welcome message
 
-### `npm start`
+A user can view and explore database of wines and attributes.
+A user can create, edit or delete a new wine entry.
+A user can view information about a specific wine.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Wireframe pages when starting the project
+HOME PAGE
+![Screenshot 2023-04-18 at 8 51 15 PM](https://user-images.githubusercontent.com/119354325/232938190-b3c2bd66-b544-4d3d-93d2-067fd0e54df0.png)
 
-### `npm test`
+ABOUT PAGE
+![Screenshot 2023-04-18 at 8 51 33 PM](https://user-images.githubusercontent.com/119354325/232938209-4f607bc7-8295-4003-8e76-ed256cf44997.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+INDEX PAGE
+![Screenshot 2023-04-18 at 8 51 48 PM](https://user-images.githubusercontent.com/119354325/232938212-a5b867eb-f17d-455d-83c9-60209eabf48d.png)
 
-### `npm run build`
+SHOW PAGE
+![Screenshot 2023-04-18 at 8 52 01 PM](https://user-images.githubusercontent.com/119354325/232938232-39a0ed6c-e4bb-424b-8f80-cc8f5e9048a7.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+NEW PAGE
+![Screenshot 2023-04-18 at 8 52 16 PM](https://user-images.githubusercontent.com/119354325/232938247-d94b4f1f-fbbb-4502-b60a-1bb997217589.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+REGISTER/LOG IN PAGE
+![Screenshot 2023-04-18 at 8 52 29 PM](https://user-images.githubusercontent.com/119354325/232938257-69cb0fae-2ba1-4dd8-9aca-98945f043302.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+The actual app after completing it.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<img width="1431" alt="Screenshot 2023-04-18 at 8 44 22 PM" src="https://user-images.githubusercontent.com/119354325/232937712-ce3e580f-93e6-40c2-9435-afda256a85c9.png">
+<img width="1423" alt="Screenshot 2023-04-18 at 8 45 26 PM" src="https://user-images.githubusercontent.com/119354325/232937819-de947612-9b42-4477-a4fe-3f2de516c131.png">
+<img width="1427" alt="Screenshot 2023-04-18 at 8 45 54 PM" src="https://user-images.githubusercontent.com/119354325/232937852-5ff4a825-a577-4a17-b612-f690e290e783.png">
+<img width="1400" alt="Screenshot 2023-04-18 at 8 46 10 PM" src="https://user-images.githubusercontent.com/119354325/232937769-bff74192-c15e-412c-995c-f5ba524c00fb.png">
+<img width="1420" alt="Screenshot 2023-04-18 at 8 47 16 PM" src="https://user-images.githubusercontent.com/119354325/232937783-242461dc-5acf-439d-a9cf-6785209eff7f.png">
+<img width="1424" alt="Screenshot 2023-04-18 at 8 47 38 PM" src="https://user-images.githubusercontent.com/119354325/232937792-73d506e6-160d-4763-a89e-3b0426ed9ebe.png">
