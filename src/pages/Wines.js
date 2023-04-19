@@ -14,7 +14,7 @@ const Wines = (props) => {
     return(
       <div className="new">
 
-      <button className="plus" title="Add a New Wine" onClick={() => navigate(`/wines/${_id}/new`)}>+</button>
+      <button className="plus" title="Add a New Wine" onClick={() => navigate(`/wines/new`)}>+</button>
     <div className="wineIndex"> {props.wineData.data.map((wineData) => (
         <Wine {...wineData} />
     ))} 

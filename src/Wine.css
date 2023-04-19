@@ -1,19 +1,19 @@
-li {
+.showSection li {
   color: #444;
 }
 
-img {
+.showSection img {
   max-width: 300px;
   border-radius: 10px;
 } 
 
 
 
-.wineDetailsList li:first-child {
+.showSection .wineDetailsList li:first-child {
   font-size: 24px;
   font-weight: bold;
 }
-.wineDetails {
+.showSection .wineDetails {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,16 +23,16 @@ img {
   padding: 20px;
 }
 
-.starRating {
+.showSection .starRating {
   color: gold;
 }
 
-.starRating {
+.showSection .starRating {
   font-size: 1.2rem;
   display: inline-block;
 }
 
-.stars-outer {
+.showSection .stars-outer {
   position: relative;
   display: inline-block;
   font-family: "Font Awesome 5 Free";
@@ -40,11 +40,11 @@ img {
   color: #ccc;
 }
 
-.stars-outer::before {
+.showSection .stars-outer::before {
   content: "\2605\2605\2605\2605\2605";
 }
 
-.stars-inner {
+.showSection .stars-inner {
   position: absolute;
   top: 0;
   left: 0;
@@ -54,11 +54,11 @@ img {
   color: gold;
 }
 
-.stars-inner::before {
+.showSection .stars-inner::before {
   content: "\2605\2605\2605\2605\2605";
 } 
 
-.arrowButton {
+.showSection .arrowButton {
   font-size: 14px;
   padding: 0;
   border: none;
@@ -68,16 +68,16 @@ img {
   margin-right: 10px;
 }
 
-.arrowButton:hover {
+.showSection .arrowButton:hover {
   color: #861c1c;
 }
 
 
-.ratingText {
+.showSection .ratingText {
   font-size: 14px;
   color: #999;
 }
-.enlarged {
+.showSection .enlarged {
   max-width: 100%;
   max-height: 100%;
   position: fixed;
@@ -91,3 +91,14 @@ img {
   transform: scale(2);
 }
 
+.showSection .edit-button {
+  border: 1px solid #FFF;
+  background-color: #FFF;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.showSection .edit-button:hover img {
+  opacity: 0.7;
+}

@@ -20,11 +20,11 @@ import { Route, Routes } from "react-router-dom"
 
 
 function App() {
-  const URL = "http://localhost:4000/"
+  const URL = process.env.REACT_APP_BASE_URL
   const [wineData, setWineData] = useState(null) //defines the wine data pulled from ATLAS/SEEDED API Data
   const getWineData = async () => {
     try {
-      const response = await fetch(`${URL}wines`); //pull data in from ATLAS
+      const response = await fetch(`${URL}/wines`); //pull data in from ATLAS
       if (!response.ok) {
         throw new Error('Failed to fetch wine data');//alerts if the data does not land
       }
@@ -41,7 +41,7 @@ function App() {
   const deleteWine = async (_id) => {
     console.log(_id)
     try {
-      const response = await fetch(`${URL}wines/${_id}`, {
+      const response = await fetch(`${URL}/wines/${_id}`, {
         method: "DELETE",
       });
       if (!response.ok) {
@@ -54,6 +54,10 @@ function App() {
 
     const createWine = async (newWine) => {
       await fetch (URL + newWine, {
+    //create
+    const createWine = async (_id, createdWine) => {
+      try{
+        const response = await fetch (`${URL}/wines/${_id}`, {
           method:"POST",
         })
         getWineData()
@@ -63,7 +67,7 @@ function App() {
     //update
     const updateWine = async (_id, updatedWine) => {
       try {
-        const response = await fetch(`${URL}wines/${_id}`, {
+        const response = await fetch(`${URL}/wines/${_id}`, {
           method: "PUT",
           headers: {
             "Content-Type": "application/json",
@@ -96,6 +100,7 @@ return (
       <Route exact path="/about" element={<About URL={URL} />} />
       <Route exact path="/register" element={<Register URL={URL} />} />
       <Route exact path="/new" element={<New URL={URL} createWine={createWine}/>} />
+      <Route exact path="/wines/new" element={<New wineData={wineData} createWine={createWine}/>} />
       <Route exact path="/wines" element={<Wines wineData={wineData} URL={URL} />} />
       <Route exact path="/wines/:_id" element={<Wine wineData={wineData} URL={URL} deleteWine={deleteWine} getWineData={getWineData} />} />
       <Route exact path="/wines/:_id/edit" element={<Edit wineData={wineData} updateWine={updateWine} />} />

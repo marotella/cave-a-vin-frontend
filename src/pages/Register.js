@@ -2,8 +2,8 @@
 function Register() {
     return (
         <div className="user" >
-        <span className="signup">
-            <form>
+        <span className="signup" >
+            <form >
             <h3 className="register" style={{ color: "#861c1c"}}>Register</h3><br></br>
             <input type="text" class="form-control" style={{ width: "400px"}} placeholder="First name" aria-label="First name"></input><br></br>
             <input type="text" class="form-control" style={{ width: "400px"}} placeholder="Last name" aria-label="Last name"></input><br></br>
@@ -14,6 +14,7 @@ function Register() {
             </div>
             </form>
         </span>
+        
         <span className="signin">
             <form>
             <h3 className="register" style={{ color: "#861c1c"}}>Sign in</h3><br></br>
@@ -24,7 +25,7 @@ function Register() {
             </div>
             </form>
         </span>
-        
+        <div className="image"></div>
         </div>
         
      )
