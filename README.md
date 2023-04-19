@@ -1,4 +1,4 @@
-# cave-a-vin-backend
+# cave-a-vin-frontend
 CAVE A VIN (Wine cellar in French)
 A virtual wine cellar, where you can find, view, edit, add and delete wines. The application is a wine search and discovery platform built using the MERN-stack. Similar to Yelp, but specifically for wines, a virtual winery.
 
