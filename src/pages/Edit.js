@@ -1,27 +1,37 @@
 import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import "../Edit.css";
 
 const Edit = ({ wineData, updateWine }) => {
   const navigate = useNavigate(); //initialize navigate to use routing functions
   const { _id } = useParams(); //get the ID of the wine to be edited
-  const wine = wineData?.data.find((wine) => wine._id == _id); //find the wine with the matching ID
+  const wine = wineData?.data.find((wine) => wine._id == _id); //find the wine with the matching _id
   const [wineForm, setWineForm] = React.useState(wine); //initialize wineForm to the data of the wine to be edited
 
    //This function handles form submission when user clicks "Update Wine"
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const confirmed = window.confirm("Please confirm that you would like to save these changes.");
+  if (confirmed) {
     await updateWine(_id, wineForm); //call updateWine function to update the wine with the new data
     navigate(`/wines/${_id}`); //navigate back to the Wine page for the updated wine
-  };
-  
+  }
+}
+
  //This function handles changes in the input fields of the form
   const handleChange = (e) => {
     setWineForm({ ...wineForm, [e.target.name]: e.target.value });
   };
 
   return (
+    <section className="editSection">
+        <div>
+        <div className="imageContainer">
+          <img src={wineForm.image} alt={wineForm.wine} />
+        </div>
+        </div>
     <div className="wineForm">
-      <h3>Edit Wine</h3>
+      {/* <h3>Edit Wine</h3> */}
       <form onSubmit={handleSubmit}>
         <div className="formGroup">
           <label htmlFor="wine">Wine Name:</label>
@@ -84,7 +94,7 @@ const Edit = ({ wineData, updateWine }) => {
         <div className="formGroup">
           <label htmlFor="reviews">Number of Reviews:</label>
           <input
-            type="number"
+            type="string"
             id="reviews"
             name="reviews"
             min="0"
@@ -97,12 +107,14 @@ const Edit = ({ wineData, updateWine }) => {
             }
           />
         </div>
-        <div className="buttonContainer">
+      
+        <div style={{ marginTop: "40px" }}className="buttonContainer">
           <button type="submit">Update Wine</button>
           <button onClick={() => navigate(`/wines/${_id}`)}>Cancel</button>
         </div>
       </form>
     </div>
+    </section>
   );
 };
 
