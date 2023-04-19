@@ -20,7 +20,7 @@ import { Route, Routes } from "react-router-dom"
 
 
 function App() {
-  const URL = "http://localhost:4000/"
+  const URL = process.env.REACT_APP_BASE_URL
   const [wineData, setWineData] = useState(null) //defines the wine data pulled from ATLAS/SEEDED API Data
   const getWineData = async () => {
     try {
