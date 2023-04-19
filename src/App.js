@@ -24,7 +24,7 @@ function App() {
   const [wineData, setWineData] = useState(null) //defines the wine data pulled from ATLAS/SEEDED API Data
   const getWineData = async () => {
     try {
-      const response = await fetch(`${URL}wines`); //pull data in from ATLAS
+      const response = await fetch(`${URL}/wines`); //pull data in from ATLAS
       if (!response.ok) {
         throw new Error('Failed to fetch wine data');//alerts if the data does not land
       }
@@ -41,7 +41,7 @@ function App() {
   const deleteWine = async (_id) => {
     console.log(_id)
     try {
-      const response = await fetch(`${URL}/wines/${_id}`, {
+      const response = await fetch(`${URL}wines/${_id}`, {
         method: "DELETE",
       });
       if (!response.ok) {
