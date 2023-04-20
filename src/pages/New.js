@@ -68,11 +68,9 @@ const handleChange = (e) => {
         />
       <label htmlFor="reviews">Number of Reviews: </label>
       <input
-      type="number"
+      type="string"
       className="formitems"
       min="0"
-       max="5"
-      step="0.1"
       value={wineForm?.rating?.reviews || ""}
       name="reviews"
       placeholder="number of reviews"
