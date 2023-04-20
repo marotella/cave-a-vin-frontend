@@ -52,8 +52,6 @@ function App() {
       console.error(error);
     }}
 
-    const createWine = async (newWine) => {
-      await fetch (URL + newWine, {
     //create
     const createWine = async (_id, createdWine) => {
       try{
@@ -108,9 +106,6 @@ return (
       <Route exact path="/" element={<Home URL={URL} />} />
       <Route exact path="/about" element={<About URL={URL} />} />
       <Route exact path="/register" element={<Register URL={URL} />} />
-<<<<<<<<< Temporary merge branch 1
-      <Route exact path="/new" element={<New URL={URL} createWine={createWine}/>} />
-=========
       <Route exact path="/wines/new" element={<New wineData={wineData} createWine={createWine}/>} />
       <Route exact path="/wines" element={<Wines wineData={wineData} URL={URL} />} />
       <Route exact path="/wines/:_id" element={<Wine wineData={wineData} URL={URL} deleteWine={deleteWine} getWineData={getWineData} />} />
