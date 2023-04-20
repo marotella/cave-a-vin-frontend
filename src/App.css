@@ -469,7 +469,7 @@ button[title]:hover:after {
   padding:3%;
   margin-left:3%;
   background-color: white;
-  height:700px;
+  height:750px;
 }
 .formitems {
   margin:1%;
@@ -670,4 +670,8 @@ height:600px;
   height:100%;
   bottom:-50%;
  }
+ .image {
+  right:-30%;
+  top:100%;
+}
 }
