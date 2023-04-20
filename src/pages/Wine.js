@@ -84,7 +84,6 @@ const Wine = ({wineData, deleteWine, getWineData}) => {
           </li>
           <li>
             <button id="delete" onClick={removeWine}>DELETE</button>
-
             <button id="edit" onClick={() => navigate(`/wines/${_id}/edit`)}>EDIT</button>
             {/* <button className="edit-button" onClick={() => navigate(`/wines/${_id}/edit`)}>
             <img src="https://i.imgur.com/ZufHNsm.png" alt="Edit Wine" title="Edit" style={{ width: "20px", height: "20px" }}/>
