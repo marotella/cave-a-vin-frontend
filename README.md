@@ -1,4 +1,5 @@
 # cave-a-vin-frontend
+Live link: https://cave-a-vin-frontend.herokuapp.com/
 CAVE A VIN (Wine cellar in French)
 A virtual wine cellar, where you can find, view, edit, add and delete wines. The application is a wine search and discovery platform built using the MERN-stack. Similar to Yelp, but specifically for wines, a virtual winery.
 
@@ -17,6 +18,7 @@ Adhered to the MVCR file structure: Models, Views, Controllers, and Routes
 Full CRUD operations.
 Included a third party API - https://sampleapis.com/api-list/wines/red and https://sampleapis.com/api-list/wines/white seeded in Atlas
 Deployed online and accessible to the public via Heroku
+Used Trello to help organize our workflow.
 Used two git repositories (ONE for frontend and ONE for backend code)
 
 # Wine Schema includes:
