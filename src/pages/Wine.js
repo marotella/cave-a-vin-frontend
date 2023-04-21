@@ -3,7 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import "../Wine.css";
 
 
-//pass down the props in the app.js so that we can display individual data and delete. We will need to add in update when we are ready
+//pass down the props in the app.js so that we can display individual data, delete and updated
 const Wine = ({wineData, deleteWine, getWineData}) => {
   const [enlarged, setEnlarged] = React.useState(false);
   //use the param to match the id in the database
@@ -19,6 +19,7 @@ const Wine = ({wineData, deleteWine, getWineData}) => {
     getWineData();
     navigate("/wines");
   };
+
 //This function converts the numerical rating into a five star display 
   const starRating = (rating) => {
     const percentage = (rating / 5) * 100;
@@ -87,7 +88,6 @@ const Wine = ({wineData, deleteWine, getWineData}) => {
           </li>
           <li>
             <button id="delete" onClick={removeWine}>DELETE</button>
-
             <button id="edit" onClick={() => navigate(`/wines/${_id}/edit`)}>EDIT</button>
             {/* <button className="edit-button" onClick={() => navigate(`/wines/${_id}/edit`)}>
             <img src="https://i.imgur.com/ZufHNsm.png" alt="Edit Wine" title="Edit" style={{ width: "20px", height: "20px" }}/>

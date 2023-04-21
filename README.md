@@ -30,20 +30,23 @@ Used two git repositories (ONE for frontend and ONE for backend code)
 - Number of Ratings: Number
 
 # Routes:
-Index: .get/wines/ Lists all of the current wines including Winery, wine and image
-Show: .get/wines/:id Show's wine information including an image for each wine, winery, location and rating
-Create: .post/wines/ creates a new wine
-Update: .put/wines/:id/edit Changes values of a wine
-Delete: .delete/wines/:id Removes a wine from the database
-Home: .get/ Home route with a welcome message
+- Index: .get/wines/ Lists all of the current wines including Winery, wine and image
+- Show: .get/wines/:id Show's wine information including an image for each wine, winery, location and rating
+- Create: .post/wines/ creates a new wine
+- Update: .put/wines/:id/edit Changes values of a wine
+- Delete: .delete/wines/:id Removes a wine from the database
+- Home: .get/ Home route with a welcome message
 
-# User Stories
+# User Stories:
 - A user can view and explore database of wines and attributes.
-- A user can create a new wine and add and image.
-- A user can edit a wine in the cellar.
-- A user can delete a wine entry.
+- A user can create a new entry for the wine cellar and add a wine.
+- A user can edit an existing wine and update the database
+- A user can delete a wine entry from the database.
 - A user can view information about a specific wine.
 
+# Design
+Flexbox and Bootstrap was used to enhance styling.
+Media Query was used to create a more responsive design.
 
 # Wireframe pages when starting the project
 HOME PAGE
@@ -65,7 +68,7 @@ REGISTER/LOG IN PAGE
 ![Screenshot 2023-04-18 at 8 52 29 PM](https://user-images.githubusercontent.com/119354325/232938257-69cb0fae-2ba1-4dd8-9aca-98945f043302.png)
 
 
-The actual app after completing it.
+# The actual app after completing it.
 
 <img width="1431" alt="Screenshot 2023-04-18 at 8 44 22 PM" src="https://user-images.githubusercontent.com/119354325/232937712-ce3e580f-93e6-40c2-9435-afda256a85c9.png">
 <img width="1423" alt="Screenshot 2023-04-18 at 8 45 26 PM" src="https://user-images.githubusercontent.com/119354325/232937819-de947612-9b42-4477-a4fe-3f2de516c131.png">
@@ -75,19 +78,13 @@ The actual app after completing it.
 <img width="1424" alt="Screenshot 2023-04-18 at 8 47 38 PM" src="https://user-images.githubusercontent.com/119354325/232937792-73d506e6-160d-4763-a89e-3b0426ed9ebe.png">
 
 
-# Design:
-CSS was used to design the project, along with flexbox and Bootstrap. 
-All pages have the same header and footer to allow for ease of navigation.
-Text animation was included along with the ability to enlarge images.
-Media Query was used to create a more responsive design.
 
 # Next Steps:
 Create a search feature to filter the index page for a user based on the wine name.
 User authentication to allow for favoriting wines and controlling access to delete and update.
 
 
-# Deployed Link:
-
+# Deployed Links:
 Deployed via Heroku:
 - Frontend: https://cave-a-vin-frontend.herokuapp.com/
 - Backend: https://cave-a-vin-backend.herokuapp.com/

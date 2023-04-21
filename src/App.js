@@ -56,7 +56,7 @@ function App() {
     //create
     const createWine = async (_id, createdWine) => {
       try{
-        const response = await fetch (`${URL}/wines/${_id}`, {
+        const response = await fetch (`${URL}wines/${_id}`, {
           method:"POST",
           headers: {
             "Content-Type": "application/json",
