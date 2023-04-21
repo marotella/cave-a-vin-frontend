@@ -1,4 +1,6 @@
 
+
+// Form set up for future user authorization to signup and sign in for an account.
 function Register() {
     return (
         <div className="user" >
