@@ -9,7 +9,7 @@ const Wine = ({wineData, deleteWine, getWineData}) => {
   //use the param to match the id in the database
   const { _id } = useParams();
   //checks that the wine data is loaded and then looks for the wine that matches the param of id.
-  const wine = wineData?.data.find(wine => wine._id == _id);
+  const wine = wineData?.data.find(wine => wine._id === _id);
   const navigate = useNavigate();
 
   //used to remove a wine form the data base, not yet functional.
@@ -19,7 +19,8 @@ const Wine = ({wineData, deleteWine, getWineData}) => {
     getWineData();
     navigate("/wines");
   };
-//changes the numerical rating value into a likert 5 star scale
+
+//This function converts the numerical rating into a five star display 
   const starRating = (rating) => {
     const percentage = (rating / 5) * 100;
     return (
@@ -32,17 +33,20 @@ const Wine = ({wineData, deleteWine, getWineData}) => {
     );
   };
 
+  //Pouring message when the data has not yet landed
   const loading = () => {
     return <h1 style={{color:"#943330", fontFamily:'Courier New', letterSpacing:'-0.6px', position:"relative", left:"70px"}}>Pouring...</h1>;
   };
 
   const loaded = () => {
-    const currentIndex = wineData.data.findIndex(wine => wine._id == _id);
+    //Code to move through the index of the wines for previous and next
+    const currentIndex = wineData.data.findIndex(wine => wine._id === _id);
     const prevIndex = currentIndex > 0 ? currentIndex - 1 : wineData.data.length - 1;
     const nextIndex = currentIndex < wineData.data.length - 1 ? currentIndex + 1 : 0;
-    const prevId = wineData.data[prevIndex]._id;
-    const nextId = wineData.data[nextIndex]._id;
+    const prevId = wineData.data[prevIndex]._id; //sets variable for previous wine in database
+    const nextId = wineData.data[nextIndex]._id; //sets variable for the next wine in the database
    
+    //Displays wine information and buttons that perform update and delete
     return (
       <section className="showSection">
       <div className="wineDetails">

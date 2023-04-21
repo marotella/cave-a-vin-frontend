@@ -4,16 +4,22 @@ CAVE A VIN (Wine cellar in French)
 A virtual wine cellar, where you can find, view, edit, add and delete wines. The application is a wine search and discovery platform built using the MERN-stack. Similar to Yelp, but specifically for wines, a virtual winery.
 
 # Technologies used:
--  MERN-Stack; Node.js, MongoDB, Express, React and Bootstrap
- - Adhered to the MVCR file structure: Models, Views, Controllers, and Routes
- - Deployed online and accessible to the public via Heroku
- 
- # Approach:
-- Used Trello to help organize our workflow.
-- Used two git repositories (ONE for frontend and ONE for backend code)
-- Full CRUD operations
-- Included a third party APIs - https://sampleapis.com/api-list/wines/red and https://sampleapis.com/api-list/wines/white
-- React used as a frontend framework for backend routes set up using express
+MERN-Stack:
+- Node.js
+- Mongoose
+- Express
+- React
+- Bootstrap
+- Flexbox
+- Heroku 
+
+# Approach:
+Adhered to the MVCR file structure: Models, Views, Controllers, and Routes
+Full CRUD operations.
+Included a third party API - https://sampleapis.com/api-list/wines/red and https://sampleapis.com/api-list/wines/white seeded in Atlas
+Deployed online and accessible to the public via Heroku
+Used Trello to help organize our workflow.
+Used two git repositories (ONE for frontend and ONE for backend code)
 
 # Wine Schema includes:
 - Winery: String
@@ -24,7 +30,7 @@ A virtual wine cellar, where you can find, view, edit, add and delete wines. The
 - Number of Ratings: Number
 
 # Routes:
- - Index: .get/wines/ Lists all of the current wines including Winery, wine and image
+- Index: .get/wines/ Lists all of the current wines including Winery, wine and image
 - Show: .get/wines/:id Show's wine information including an image for each wine, winery, location and rating
 - Create: .post/wines/ creates a new wine
 - Update: .put/wines/:id/edit Changes values of a wine
@@ -41,7 +47,6 @@ A virtual wine cellar, where you can find, view, edit, add and delete wines. The
 # Design
 Flexbox and Bootstrap was used to enhance styling.
 Media Query was used to create a more responsive design.
-
 
 # Wireframe pages when starting the project
 HOME PAGE
@@ -73,10 +78,13 @@ REGISTER/LOG IN PAGE
 <img width="1424" alt="Screenshot 2023-04-18 at 8 47 38 PM" src="https://user-images.githubusercontent.com/119354325/232937792-73d506e6-160d-4763-a89e-3b0426ed9ebe.png">
 
 
-# Next Steps
-Add in a search feature to display a wine based on its attributes on the index page.
-Implement user authorization to control access to updating and deleting data.
 
-# Deployed links:
+# Next Steps:
+Create a search feature to filter the index page for a user based on the wine name.
+User authentication to allow for favoriting wines and controlling access to delete and update.
+
+
+# Deployed Links:
+Deployed via Heroku:
 - Frontend: https://cave-a-vin-frontend.herokuapp.com/
 - Backend: https://cave-a-vin-backend.herokuapp.com/
